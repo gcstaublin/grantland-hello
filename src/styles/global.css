@@ -635,3 +635,95 @@ aside {
    padding: 2px 6px;
    margin-left: auto;
  }
+
+
+
+
+ /*
+// --------------------------------------------
+// --------------------------------------------
+//
+// Offline
+//
+// --------------------------------------------
+// --------------------------------------------
+*/
+
+
+ /* ─── Offline Section ────────────────────────────────────── */
+ .offline-section {
+   display: none;
+   min-height: calc(100vh - var(--header-h));
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 48px;
+   opacity: 0;
+   transform: translateY(16px);
+   transition: opacity 0.45s ease, transform 0.45s ease;
+ }
+
+ .offline-section.is-visible {
+   display: flex;
+   opacity: 1;
+   transform: translateY(0);
+ }
+
+ .offline-section.is-leaving {
+   display: flex;
+   opacity: 0;
+   transform: translateY(-8px);
+   transition: opacity 0.25s ease, transform 0.25s ease;
+ }
+
+ .offline-label {
+   font-family: var(--font-mono);
+   font-size: 9px;
+   font-weight: 500;
+   letter-spacing: 0.18em;
+   color: var(--text-muted);
+   text-transform: uppercase;
+   margin-bottom: 20px;
+ }
+
+ .offline-title {
+   font-family: var(--font-condensed);
+   font-size: clamp(36px, 5vw, 60px);
+   font-weight: 800;
+   line-height: 0.92;
+   letter-spacing: -0.01em;
+   text-transform: uppercase;
+   color: var(--text);
+   margin-bottom: 28px;
+   white-space: pre-line;
+ }
+
+ .offline-message {
+   font-family: var(--font-serif);
+   font-size: 13px;
+   font-weight: 300;
+   line-height: 1.8;
+   color: var(--text-dim);
+   max-width: 420px;
+   margin-bottom: 40px;
+   font-style: italic;
+ }
+
+ .offline-cta {
+   font-family: var(--font-mono);
+   font-size: 10px;
+   font-weight: 500;
+   letter-spacing: 0.16em;
+   text-transform: uppercase;
+   color: var(--bg);
+   background: var(--text);
+   border: none;
+   padding: 12px 24px;
+   cursor: pointer;
+   transition: opacity 0.2s ease;
+ }
+
+ .offline-cta:hover {
+   opacity: 0.85;
+ }

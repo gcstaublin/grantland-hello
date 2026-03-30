@@ -20,11 +20,23 @@ const { section, isDefault = false } = Astro.props;
     <div class="section-hero hero" aria-hidden="true">
       <!-- <div class="hero-noise"></div> -->
       <span class="hero-label hero__label">{section.label}</span>
-      <div class="hero__image-container">
-        <img
-          src="https://hertogfoundation.org/wp-content/uploads/2015/02/Abraham_Lincoln_by_Alexander_Hesler_1860-e1553614206257.png"
-        />
-      </div>
+
+      {
+        section.imgSrc && (
+          <figure class="hero__image-container">
+            <img
+              src={section.imgSrc}
+              alt={section.imgAlt || ""}
+              loading="lazy"
+            />
+            {section.imgCaption && (
+              <figcaption class="hero__image-caption">
+                {section.imgCaption}
+              </figcaption>
+            )}
+          </figure>
+        )
+      }
       <h2 class="section-title section__title">{section.title}</h2>
     </div>
   </div>

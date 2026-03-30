@@ -11,6 +11,9 @@
       "label": "ATMOSPHERIC_INTELLIGENCE //",
       "title": "FROM ANALOG PULP\nTO DIGITAL VOID.",
       "lead": "Life changing words",
+      "imgSrc": "https://hertogfoundation.org/wp-content/uploads/2015/02/Abraham_Lincoln_by_Alexander_Hesler_1860-e1553614206257.png",
+      "imgAlt": "Hello",
+      "imgCaption": "Caption",
       "body": [
         {
           "type": "paragraph",

@@ -4,7 +4,7 @@ const { meta } = Astro.props;
 
 <header class="site-header">
   <div class="header-brand">
-    <span class="arrow">←</span>
+    <!-- <span class="arrow">←</span> -->
     <span class="name">{meta.name}</span>
     <span class="vol">// {meta.vol}</span>
   </div>
@@ -29,7 +29,7 @@ const { meta } = Astro.props;
       </svg>
     </button>
 
-    <button class="header-icon-btn" aria-label="Terminal">
+    <!-- <button class="header-icon-btn" aria-label="Terminal">
       <svg
         width="115"
         height="115"
@@ -41,7 +41,7 @@ const { meta } = Astro.props;
           d="M21.1 93.8C18.5975 93.8 16.4552 92.909 14.6731 91.1269C12.891 89.3448 12 87.2025 12 84.7V30.1C12 27.5975 12.891 25.4552 14.6731 23.6731C16.4552 21.891 18.5975 21 21.1 21H93.9C96.4025 21 98.5448 21.891 100.327 23.6731C102.109 25.4552 103 27.5975 103 30.1V84.7C103 87.2025 102.109 89.3448 100.327 91.1269C98.5448 92.909 96.4025 93.8 93.9 93.8H21.1ZM21.1 84.7H93.9V39.2H21.1V84.7ZM37.025 80.15L30.655 73.78L42.3713 61.95L30.5412 50.12L37.025 43.75L55.225 61.95L37.025 80.15ZM57.5 80.15V71.05H84.8V80.15H57.5Z"
           fill="currentColor"></path>
       </svg>
-    </button>
+    </button> -->
   </nav>
 </header>
 
@@ -49,10 +49,6 @@ const { meta } = Astro.props;
 {/* Style                              */}
 {/* ================================== */}
 <style>
-  .site-header {
-    background-color: green;
-  }
-
   .site-header {
     grid-column: 1 / -1;
     grid-row: 1;
@@ -78,10 +74,10 @@ const { meta } = Astro.props;
     text-transform: uppercase;
   }
 
-  .header-brand .arrow {
+  /* .header-brand .arrow {
     opacity: 0.4;
     font-size: 14px;
-  }
+  } */
 
   .header-brand .name {
     color: var(--text);

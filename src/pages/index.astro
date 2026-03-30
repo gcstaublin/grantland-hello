@@ -32,10 +32,66 @@ import ChatPanel from "../components/ChatPanel.astro";
             <ContentSection section={section} isDefault={i === 0} />
           ))
         }
+
+        <!-- Offline Section -->
+        <!---------------------------------- -->
+        <div
+          id="offline-section"
+          class="offline-section"
+          data-section-id="offline"
+          style="display: none;"
+        >
+          <p class="offline-label">{content.offline.label}</p>
+          <h2 class="offline-title">{content.offline.title}</h2>
+          <p class="offline-message">{content.offline.message}</p>
+          <button class="offline-cta">{content.offline.cta}</button>
+        </div>
       </main>
       <!-- Chat panel -->
       <!---------------------------------- -->
       <ChatPanel chat={content.chat} />
     </div>
+
+    <!-- Chat Scripts -->
+    <!---------------------------------- -->
+    <script>
+      import { initChat } from "../scripts/chat.js";
+
+      // Pass chat strings to JS at runtime
+      const chatData = {
+        welcome:
+          "SIGNAL ESTABLISHED.\n\nWelcome to The Interrogation. I am the interface between you and the subject.\n\nState your directive:\n\n  0 — Intro\n  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL to access all files simultaneously.\nType EXIT to terminate the session.",
+        options:
+          "  0 — Intro\n   1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL / EXIT.",
+        unknown:
+          "SIGNAL UNCLEAR. Input not recognized.\n\nRe-state your directive:",
+        exitMessage:
+          "SESSION TERMINATED.\n\nThank you for the interrogation. The subject has gone offline.\n\nType RESTART to reinitiate the sequence.",
+        scrollActivated:
+          "SCROLL MODE ACTIVATED.\nAll files now accessible simultaneously.\n\nType CHAT to return to directed mode.",
+        chatRestored:
+          "DIRECTED MODE RESTORED.\n\nSelect your next directive:\n\n  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS",
+        restart:
+          "SEQUENCE REINITIATING...\n// session restored\n\nSIGNAL ESTABLISHED. Welcome back.\n\n  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL / EXIT.",
+        accessing: "ACCESSING FILE:",
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initChat(chatData);
+
+        const themeToggle = document.getElementById("theme-toggle");
+        themeToggle.addEventListener("click", () => {
+          const isLight =
+            document.documentElement.getAttribute("data-theme") === "light";
+          if (isLight) {
+            document.documentElement.removeAttribute("data-theme");
+            localStorage.removeItem("theme");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

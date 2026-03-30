@@ -44,7 +44,7 @@
       "tags": ["DESIGN", "TYPE", "SYSTEMS"]
     },
     {
-      "id": "second",
+      "id": "background",
       "keywords": ["home", "landing", "1", "start"],
       "label": "ATMOSPHERIC_INTELLIGENCE //",
       "title": "Radical Headline",
@@ -78,6 +78,13 @@
       "tags": ["DESIGN", "TYPE", "SYSTEMS"]
     }
   ],
+  "offline": {
+    "id": "offline",
+    "label": "SESSION_TERMINATED //",
+    "title": "THE SUBJECT\nHAS LEFT THE BUILDING.",
+    "message": "The interrogation is complete. All files have been sealed. The subject has returned to the analog.",
+    "cta": "REINITIATE SESSION"
+  },
   "chat": {
     "panelTitle": "THE INTERROGATION",
     "statusLabel": "STATUS: SECURE",

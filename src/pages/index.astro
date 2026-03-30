@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+import content from "../data/content.json";
+import Header from "../components/Header.astro";
+import ContentSection from "../components/ContentSection.astro";
 ---
 
 <html lang="en">
@@ -10,11 +13,25 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="generator" content={Astro.generator} />
-    <title>Grantland Hello</title>
+    <title>{content.meta.name} // {content.meta.vol}</title>
   </head>
   <body>
-    <main>
-      <h1>Grant</h1>
-    </main>
+    <div class="l-page">
+      <Header meta={content.meta} />
+      <main class="main__content" id="js-main__content">
+        <div class="scroll-mode__banner">
+          // SCROLL MODE — all files accessible — type CHAT to return to
+          directed mode
+        </div>
+
+        <!-- Content Sections -->
+        {
+          content.sections.map((section, i) => (
+            <ContentSection section={section} isDefault={i === 0} />
+          ))
+        }
+      </main>
+      <aside class="chat__panel" id="js-chat__panel"><div>chat</div></aside>
+    </div>
   </body>
 </html>

@@ -1,0 +1,319 @@
+---
+interface BodyItem {
+  type: "paragraph" | "pullquote" | "image";
+  text?: string;
+  src?: string;
+  alt?: string;
+  caption?: string;
+}
+
+const { section, isDefault = false } = Astro.props;
+---
+
+<section
+  class:list={["content-section", { "is-visible": isDefault }]}
+  data-section-id={section.id}
+  data-keywords={section.keywords.join(",")}
+  style={isDefault ? "" : "display: none;"}
+>
+  <div class="hero-noise hero__noise">
+    <div class="section-hero hero" aria-hidden="true">
+      <!-- <div class="hero-noise"></div> -->
+      <span class="hero-label hero__label">{section.label}</span>
+      <div class="hero__image-container">
+        <img
+          src="https://hertogfoundation.org/wp-content/uploads/2015/02/Abraham_Lincoln_by_Alexander_Hesler_1860-e1553614206257.png"
+        />
+      </div>
+      <h2 class="section-title section__title">{section.title}</h2>
+    </div>
+  </div>
+
+  <div class="section-body">
+    <p class="section-label section__label">{section.label}</p>
+
+    {section.lead && <p class="section-lead">{section.lead}</p>}
+
+    {
+      section.body && (
+        <div class="section-body-content">
+          {section.body.map((item: BodyItem) => {
+            if (item.type === "pullquote") {
+              return (
+                <blockquote class="section-pullquote">{item.text}</blockquote>
+              );
+            } else if (item.type === "image") {
+              return (
+                <figure class="section-image-block">
+                  <img src={item.src} alt={item.alt || ""} loading="lazy" />
+                  {item.caption && (
+                    <figcaption class="section-image-caption">
+                      {item.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              );
+            } else {
+              return <p class="section-paragraph">{item.text}</p>;
+            }
+          })}
+        </div>
+      )
+    }
+
+    {
+      section.tags && (
+        <div class="section-tags section__tags">
+          {section.tags.map((tag: string) => (
+            <span class="section-tag section__tag">{tag}</span>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  /* ─── Content Section ───────────────────────────────────── */
+  .content-section {
+    display: none;
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s ease;
+    min-height: calc(100vh - var(--header-h));
+  }
+
+  .content-section.is-visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .content-section.is-leaving {
+    display: block;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+    pointer-events: none;
+  }
+
+  /* Scroll mode: all sections visible */
+  .main-content.scroll-mode .content-section {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── Section: Hero Image ────────────────────────────────── */
+  .section-hero {
+    width: 100%;
+    /* height: 280px; */
+    background: linear-gradient(160deg, #1a1a1a 0%, #0a0a0a 60%, #111 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(
+        ellipse at 30% 60%,
+        rgba(255, 255, 255, 0.03) 0%,
+        transparent 60%
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.01) 2px,
+        rgba(255, 255, 255, 0.01) 4px
+      );
+  }
+
+  .section-hero .hero-noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    mix-blend-mode: overlay;
+  }
+
+  .section-hero .hero-label {
+    position: absolute;
+    bottom: 16px;
+    left: 24px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  /* Each section gets a unique hero tint */
+  [data-section-id="landing"] .section-hero {
+    background: linear-gradient(160deg, #161412 0%, #0a0908 70%, #111 100%);
+  }
+  [data-section-id="background"] .section-hero {
+    background: linear-gradient(160deg, #12141a 0%, #0a0a0f 70%, #0f0f14 100%);
+  }
+  [data-section-id="work"] .section-hero {
+    background: linear-gradient(160deg, #141012 0%, #0f0a0b 70%, #130c0e 100%);
+  }
+  [data-section-id="philosophy"] .section-hero {
+    background: linear-gradient(160deg, #0f1210 0%, #0a0d0a 70%, #0d110d 100%);
+  }
+  [data-section-id="skills"] .section-hero {
+    background: linear-gradient(160deg, #14120e 0%, #0f0d09 70%, #13110c 100%);
+  }
+
+  /* Light theme hero tints */
+  [data-theme="light"] [data-section-id="landing"] .section-hero {
+    background: linear-gradient(160deg, #ede8df 0%, #f0ede8 70%, #ece9e3 100%);
+  }
+  [data-theme="light"] [data-section-id="background"] .section-hero {
+    background: linear-gradient(160deg, #e8edf2 0%, #eaedf2 70%, #e8ecf2 100%);
+  }
+  [data-theme="light"] [data-section-id="work"] .section-hero {
+    background: linear-gradient(160deg, #f0e8ec 0%, #ede8ea 70%, #eae3e5 100%);
+  }
+  [data-theme="light"] [data-section-id="philosophy"] .section-hero {
+    background: linear-gradient(160deg, #e6ede9 0%, #e9edea 70%, #e7ede9 100%);
+  }
+  [data-theme="light"] [data-section-id="skills"] .section-hero {
+    background: linear-gradient(160deg, #ede9e3 0%, #ede9df 70%, #ece8e0 100%);
+  }
+
+  [data-theme="light"] .section-hero::before {
+    background:
+      radial-gradient(
+        ellipse at 30% 60%,
+        rgba(0, 0, 0, 0.03) 0%,
+        transparent 60%
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.015) 2px,
+        rgba(0, 0, 0, 0.015) 4px
+      );
+  }
+
+  /* ─── Section: Body ──────────────────────────────────────── */
+  .section-body {
+    padding: 32px 32px 48px;
+    max-width: 680px;
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .section-title {
+    font-family: var(--font-condensed);
+    font-size: clamp(48px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 28px;
+    white-space: pre-line;
+  }
+
+  .section-lead {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 24px;
+    font-style: italic;
+    border-left: 1px solid var(--border-light);
+    padding-left: 16px;
+  }
+
+  .section-paragraph {
+    font-family: var(--font-serif);
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+  }
+
+  .section-body-content > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-pullquote {
+    font-family: var(--font-condensed);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--text);
+    border-left: 2px solid var(--text-muted);
+    padding: 4px 0 4px 20px;
+    margin: 28px 0;
+  }
+
+  .section-image-block {
+    margin: 28px 0;
+  }
+
+  .section-image-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .section-image-caption {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  /* ─── Section: Tags ──────────────────────────────────────── */
+  .section__tags {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .section__tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+</style>

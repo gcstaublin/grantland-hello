@@ -3,6 +3,7 @@ import "../styles/global.css";
 import content from "../data/content.json";
 import Header from "../components/Header.astro";
 import ContentSection from "../components/ContentSection.astro";
+import ChatPanel from "../components/ChatPanel.astro";
 ---
 
 <html lang="en">
@@ -25,13 +26,16 @@ import ContentSection from "../components/ContentSection.astro";
         </div>
 
         <!-- Content Sections -->
+        <!---------------------------------- -->
         {
           content.sections.map((section, i) => (
             <ContentSection section={section} isDefault={i === 0} />
           ))
         }
       </main>
-      <aside class="chat__panel" id="js-chat__panel"><div>chat</div></aside>
+      <!-- Chat panel -->
+      <!---------------------------------- -->
+      <ChatPanel chat={content.chat} />
     </div>
   </body>
 </html>

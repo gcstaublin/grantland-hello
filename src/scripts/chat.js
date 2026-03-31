@@ -92,7 +92,7 @@ function handleInput(chatData) {
     } else {
       setTimeout(() => {
         addSystemMessage(
-          "SESSION TERMINATED. Type RESTART to reinitiate.",
+          "SESSION TERMINATED.\nType RESTART to reinitiate.",
           true,
         );
       }, 400);
@@ -143,7 +143,7 @@ function handleInput(chatData) {
 // ─── Section Matching ────────────────────────────────────────────────────────
 
 function matchSection(input) {
-  const sections = document.querySelectorAll(".content-section");
+  const sections = document.querySelectorAll(".js-content__section");
   for (const section of sections) {
     const keywords = section.dataset.keywords.split(",");
     if (keywords.some((k) => k.trim() === input || input.includes(k.trim()))) {

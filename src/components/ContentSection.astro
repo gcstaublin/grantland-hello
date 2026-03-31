@@ -19,11 +19,11 @@ const { section, isDefault = false } = Astro.props;
   <div class="hero-noise hero__noise">
     <div class="section-hero hero" aria-hidden="true">
       <!-- <div class="hero-noise"></div> -->
-      <span class="hero-label hero__label">{section.label}</span>
+      <!-- <span class="hero-label hero__label accent--micro">{section.label}</span> -->
 
       {
         section.imgSrc && (
-          <figure class="hero__image-container">
+          <figure class="hero__image-block">
             <img
               src={section.imgSrc}
               alt={section.imgAlt || ""}
@@ -37,14 +37,23 @@ const { section, isDefault = false } = Astro.props;
           </figure>
         )
       }
-      <h2 class="section-title section__title">{section.title}</h2>
+      <div class="hero__type-block">
+        <h4 class="section-label accent--micro">
+          {section.label}
+        </h4>
+        <h2 class="section-title section__title">{section.title}</h2>
+      </div>
     </div>
   </div>
 
   <div class="section-body">
-    <p class="section-label section__label">{section.label}</p>
+    <!-- <p class="section-label section__label">{section.label}</p> -->
 
-    {section.lead && <p class="section-lead">{section.lead}</p>}
+    {
+      section.lead && (
+        <p class="section-lead body--extra-large">{section.lead}</p>
+      )
+    }
 
     {
       section.body && (
@@ -66,7 +75,7 @@ const { section, isDefault = false } = Astro.props;
                 </figure>
               );
             } else {
-              return <p class="section-paragraph">{item.text}</p>;
+              return <p class="section-paragraph body--large">{item.text}</p>;
             }
           })}
         </div>
@@ -111,7 +120,7 @@ const { section, isDefault = false } = Astro.props;
       section.tags && (
         <div class="section-tags section__tags">
           {section.tags.map((tag: string) => (
-            <span class="section-tag section__tag">{tag}</span>
+            <span class="section-tag section__tag body--micro">{tag}</span>
           ))}
         </div>
       )
@@ -124,8 +133,9 @@ const { section, isDefault = false } = Astro.props;
 {/* ================================== */}
 <style>
   .section-body > * + * {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
+
   /* ─── Content Section ───────────────────────────────────── */
   .content-section {
     display: none;
@@ -141,6 +151,7 @@ const { section, isDefault = false } = Astro.props;
     display: block;
     opacity: 1;
     transform: translateY(0);
+    margin-bottom: var(--section-space-bottom);
   }
 
   .content-section.is-leaving {
@@ -162,14 +173,15 @@ const { section, isDefault = false } = Astro.props;
 
   /* ─── Section: Hero Image ────────────────────────────────── */
   .section-hero {
-    width: 100%;
+    /* position: relative; */
+    /* width: 100%; */
     /* height: 280px; */
-    background: linear-gradient(160deg, #1a1a1a 0%, #0a0a0a 60%, #111 100%);
-    position: relative;
-    overflow: hidden;
+    /* background: linear-gradient(160deg, #1a1a1a 0%, #0a0a0a 60%, #111 100%); */
+    /* overflow: hidden; */
+    padding-block-end: var(--section-body-gap);
   }
 
-  .section-hero::before {
+  /* .section-hero::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -186,31 +198,40 @@ const { section, isDefault = false } = Astro.props;
         rgba(255, 255, 255, 0.01) 2px,
         rgba(255, 255, 255, 0.01) 4px
       );
-  }
+  } */
 
-  .section-hero .hero-noise {
+  /* .section-hero .hero-noise {
     position: absolute;
     inset: 0;
     opacity: 0.4;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     background-size: 200px 200px;
     mix-blend-mode: overlay;
-  }
+  } */
 
   .section-hero .hero-label {
-    position: absolute;
-    bottom: 16px;
-    left: 24px;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    font-weight: 400;
-    letter-spacing: 0.14em;
-    color: var(--text-muted);
-    text-transform: uppercase;
+    /* position: absolute; */
+    /* bottom: 16px; */
+    /* left: 24px; */
+    /* font-family: var(--font-mono); */
+    /* font-size: 9px; */
+    /* font-weight: 400; */
+    /* letter-spacing: 0.14em; */
+    /* color: var(--text-muted); */
+    /* text-transform: uppercase; */
+    /* color: pink; */
+  }
+
+  .hero__type-block {
+    padding-inline: var(--section-space-inline);
+
+    & > * + * {
+      margin-block-start: 1rem;
+    }
   }
 
   /* Each section gets a unique hero tint */
-  [data-section-id="landing"] .section-hero {
+  /* [data-section-id="landing"] .section-hero {
     background: linear-gradient(160deg, #161412 0%, #0a0908 70%, #111 100%);
   }
   [data-section-id="background"] .section-hero {
@@ -224,10 +245,10 @@ const { section, isDefault = false } = Astro.props;
   }
   [data-section-id="skills"] .section-hero {
     background: linear-gradient(160deg, #14120e 0%, #0f0d09 70%, #13110c 100%);
-  }
+  } */
 
   /* Light theme hero tints */
-  [data-theme="light"] [data-section-id="landing"] .section-hero {
+  /* [data-theme="light"] [data-section-id="landing"] .section-hero {
     background: linear-gradient(160deg, #ede8df 0%, #f0ede8 70%, #ece9e3 100%);
   }
   [data-theme="light"] [data-section-id="background"] .section-hero {
@@ -241,9 +262,9 @@ const { section, isDefault = false } = Astro.props;
   }
   [data-theme="light"] [data-section-id="skills"] .section-hero {
     background: linear-gradient(160deg, #ede9e3 0%, #ede9df 70%, #ece8e0 100%);
-  }
+  } */
 
-  [data-theme="light"] .section-hero::before {
+  /* [data-theme="light"] .section-hero::before {
     background:
       radial-gradient(
         ellipse at 30% 60%,
@@ -257,80 +278,113 @@ const { section, isDefault = false } = Astro.props;
         rgba(0, 0, 0, 0.015) 2px,
         rgba(0, 0, 0, 0.015) 4px
       );
-  }
+  } */
 
   /* ─── Section: Body ──────────────────────────────────────── */
   .section-body {
-    padding: 32px 32px 48px;
-    /* max-width: 680px; */
-    max-width: 110ch;
+    max-width: var(--section-ch);
+    padding-inline: var(--section-space-inline);
+  }
+
+  .section-body-content {
+    columns: 2;
+    gap: var(--section-body-gap);
   }
 
   .section-label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 0.16em;
+    /* font-family: var(--font-mono); */
+    /* font-size: 9px; */
+    /* font-weight: 500; */
+    /* letter-spacing: 0.16em; */
+    /* color: var(--text-muted); */
+    /* text-transform: uppercase; */
+    /* margin-bottom: 16px; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: 0; */
+    letter-spacing: 0.18em;
     color: var(--text-muted);
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 0;
   }
 
   .section-title {
-    font-family: var(--font-condensed);
-    font-size: clamp(48px, 6vw, 72px);
-    font-weight: 800;
-    line-height: 0.92;
+    /* font-family: var(--font-condensed); */
+    /* font-size: clamp(48px, 6vw, 72px); */
+    /* font-weight: 800; */
+    line-height: 1;
     letter-spacing: -0.01em;
     text-transform: uppercase;
+    /* color: var(--text); */
+    /* margin-bottom: 28px; */
+    /* white-space: pre-line; */
+    /* margin-block: 0; */
+    font-family: var(--font-accent);
+    font-weight: 700;
+    font-size: clamp(60px, 6vw, 96px);
+    text-wrap: balance;
+
     color: var(--text);
-    margin-bottom: 28px;
-    white-space: pre-line;
   }
 
   .section-lead {
-    font-family: var(--font-serif);
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: var(--text);
-    margin-bottom: 24px;
-    font-style: italic;
-    border-left: 1px solid var(--border-light);
-    padding-left: 16px;
+    /* font-family: var(--font-serif); */
+    /* font-size: 15px; */
+    /* font-weight: 300; */
+    /* line-height: 1.7; */
+    /* color: var(--text); */
+    /* margin-bottom: 24px; */
+    /* font-style: italic; */
+    /* border-left: 1px solid var(--border-light); */
+    /* padding-left: 16px; */
+
+    max-width: 38ch;
   }
 
   .section-paragraph {
-    font-family: var(--font-serif);
+    /* font-family: var(--font-serif);
     font-size: 13.5px;
     font-weight: 300;
-    line-height: 1.85;
-    color: var(--text-dim);
-    margin-bottom: 18px;
+    line-height: 1.85; */
+    /* color: var(--text-dim); */
+    /* margin-bottom: 18px; */
+    margin-block: 0;
+    text-wrap: pretty;
   }
+
+  /* .section-paragraph + .section-paragraph {
+    margin-top: 20px;
+  } */
 
   .section-body-content > *:last-child {
     margin-bottom: 0;
   }
 
+  .section-body-content > * + * {
+    margin-top: 40px;
+  }
+
   .section-pullquote {
     font-family: var(--font-condensed);
     font-size: clamp(22px, 3vw, 30px);
-    font-weight: 700;
+    /* font-weight: 700; */
     line-height: 1.15;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: var(--text);
-    border-left: 2px solid var(--text-muted);
-    padding: 4px 0 4px 20px;
+    /* border-left: 2px solid var(--text-muted); */
+    /* border-block-start: 1px solid var(--border-light); */
+    border-block-end: 1px solid var(--border-light);
+    padding-block-end: 2rem;
+    /* padding: 4px 0 4px 20px; */
     margin: 28px 0;
+    /* color: yellow; */
+    font-family: var(--font-accent);
+    /* font-size: clamp(14px, 3vw, 22px); */
+    color: var(--text-muted);
+    text-wrap: balance;
   }
 
   .section-image-block {
-    margin: 28px 0;
+    /* margin: 28px 0; */
   }
 
   .section-image-block img {
@@ -359,10 +413,10 @@ const { section, isDefault = false } = Astro.props;
   }
 
   .section__tag {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
+    /* font-family: var(--font-mono); */
+    /* font-size: 9px; */
+    /* font-weight: 500; */
+    /* letter-spacing: 0.14em; */
     color: var(--text-muted);
     text-transform: uppercase;
   }
@@ -383,5 +437,10 @@ const { section, isDefault = false } = Astro.props;
 
   .misc__item {
     color: var(--text-muted);
+  }
+
+  /* ─── Section: Hero Image ──────────────────────────────────────── */
+  .hero__image-block {
+    margin: 0;
   }
 </style>

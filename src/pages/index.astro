@@ -15,6 +15,18 @@ import ChatPanel from "../components/ChatPanel.astro";
     <meta name="robots" content="noindex, nofollow" />
     <meta name="generator" content={Astro.generator} />
     <title>{content.meta.name} // {content.meta.vol}</title>
+    <script is:inline>
+      (function () {
+        if (localStorage.getItem("theme") === "light")
+          document.documentElement.setAttribute("data-theme", "light");
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="l-page">
@@ -62,9 +74,8 @@ import ChatPanel from "../components/ChatPanel.astro";
         welcome:
           "SIGNAL ESTABLISHED.\n\nWelcome to The Interrogation. I am the interface between you and the subject.\n\nState your directive:\n\n  0 — Intro\n  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL to access all files simultaneously.\nType EXIT to terminate the session.",
         options:
-          "  0 — Intro\n   1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL / EXIT.",
-        unknown:
-          "SIGNAL UNCLEAR. Input not recognized.\n\nRe-state your directive:",
+          "Re-state your directive:\n\n  0 — Intro\n  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL / EXIT.",
+        unknown: "SIGNAL UNCLEAR. Input not recognized.",
         exitMessage:
           "SESSION TERMINATED.\n\nThank you for the interrogation. The subject has gone offline.\n\nType RESTART to reinitiate the sequence.",
         scrollActivated:

@@ -74,6 +74,40 @@ const { section, isDefault = false } = Astro.props;
     }
 
     {
+      section.misc && (
+        <div class="misc">
+          <h3 class="misc__title">Random thoughts</h3>
+          <ul class="misc__items">
+            {section.misc.map((item: string) => (
+              <li class="misc__item">{item}</li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+
+    {
+      section.playlist && (
+        <div>
+          <p>{section.playlist.text}Dude</p>
+          <div>
+            <iframe
+              data-testid="embed-iframe"
+              style="border-radius:12px"
+              src={section.playlist.embed}
+              width="100%"
+              height="152"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      )
+    }
+
+    {
       section.tags && (
         <div class="section-tags section__tags">
           {section.tags.map((tag: string) => (
@@ -86,9 +120,12 @@ const { section, isDefault = false } = Astro.props;
 </section>
 
 {/* ================================== */}
-{/* Style                              */}
+{/* --> Style                          */}
 {/* ================================== */}
 <style>
+  .section-body > * + * {
+    margin-top: 4rem;
+  }
   /* ─── Content Section ───────────────────────────────────── */
   .content-section {
     display: none;
@@ -328,5 +365,23 @@ const { section, isDefault = false } = Astro.props;
     letter-spacing: 0.14em;
     color: var(--text-muted);
     text-transform: uppercase;
+  }
+
+  /* ─── Section: Misc ──────────────────────────────────────── */
+  .misc {
+    background-color: var(--surface-alt);
+    padding: 1rem;
+    border: 1px solid var(--border);
+  }
+
+  .misc__title {
+    color: var(--text-muted);
+  }
+
+  .misc__items {
+  }
+
+  .misc__item {
+    color: var(--text-muted);
   }
 </style>

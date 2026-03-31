@@ -409,7 +409,7 @@ body {
   background: var(--surface-alt);
   border-bottom: 1px solid var(--border);
   padding: 8px 32px;
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   font-size: 9px;
   font-weight: 400;
   letter-spacing: 0.14em;

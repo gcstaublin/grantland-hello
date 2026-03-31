@@ -401,7 +401,7 @@ body {
 
 
 
-
+/* ─── Scroll Mode Banner ─────────────────────────────────── */
 .scroll-mode__banner {
   position: sticky;
   top: 0;
@@ -416,6 +416,10 @@ body {
   color: var(--text-muted);
   text-transform: uppercase;
   display: none;
+}
+
+.scroll-mode .scroll-mode__banner {
+  display: block;
 }
 
 /* ─── Main Content ───────────────────────────────────────── */

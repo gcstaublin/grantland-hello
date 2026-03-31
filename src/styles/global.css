@@ -401,21 +401,25 @@ body {
 
 
 
-
+/* ─── Scroll Mode Banner ─────────────────────────────────── */
 .scroll-mode__banner {
   position: sticky;
   top: 0;
   z-index: 5;
   background: var(--surface-alt);
-  border-bottom: 1px solid var(--border);
-  padding: 8px 32px;
-  font-family: var(--font-mono);
-  font-size: 9px;
-  font-weight: 400;
+  border-bottom: 1px solid var(--border-light);
+  padding: 8px 24px;
+  font-family: var(--font-accent);
+  font-size: var(--body-size-100);
+  font-weight: var(--font-weight-300);
   letter-spacing: 0.14em;
   color: var(--text-muted);
   text-transform: uppercase;
   display: none;
+}
+
+.scroll-mode .scroll-mode__banner {
+  display: block;
 }
 
 /* ─── Main Content ───────────────────────────────────────── */

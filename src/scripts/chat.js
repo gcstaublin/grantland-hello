@@ -143,7 +143,7 @@ function handleInput(chatData) {
 // ─── Section Matching ────────────────────────────────────────────────────────
 
 function matchSection(input) {
-  const sections = document.querySelectorAll(".js-content__section");
+  const sections = document.querySelectorAll(".content-section");
   for (const section of sections) {
     const keywords = section.dataset.keywords.split(",");
     if (keywords.some((k) => k.trim() === input || input.includes(k.trim()))) {

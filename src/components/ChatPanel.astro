@@ -1,0 +1,50 @@
+---
+const { chat } = Astro.props;
+import "../styles/global.css";
+---
+
+<aside
+  class="chat-panel"
+  id="chat-panel"
+  aria-label="The Interrogation chat interface"
+>
+  <div class="chat-header">
+    <div class="chat-title">{chat.panelTitle}</div>
+    <div class="chat-status">
+      <span class="chat-status-dot active" id="chat-status-dot"></span>
+      <span id="chat-status-text">{chat.statusLabel}</span>
+    </div>
+  </div>
+
+  <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
+    <!-- Messages injected by chat.js -->
+  </div>
+
+  <div class="chat-input-area">
+    <form class="chat-input-form" id="chat-form" autocomplete="off">
+      <input
+        type="text"
+        class="chat-input"
+        id="chat-input"
+        placeholder="enter directive..."
+        aria-label="Chat input"
+        spellcheck="false"
+        autocorrect="off"
+        autocapitalize="off"
+      />
+      <button
+        type="submit"
+        class="chat-submit"
+        id="chat-submit"
+        aria-label="Send">↵</button
+      >
+    </form>
+  </div>
+
+  <div class="chat-footer">
+    <span class="mode-badge" id="mode-badge">CHAT MODE</span>
+    <button class="chat-clear-btn" id="chat-clear-btn" type="button">
+      // clear history
+    </button>
+  </div>
+</aside>

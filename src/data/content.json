@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "name": "Grant_Staublin",
+    "vol": "About_me",
+    "tagline": "Designer, Writer, Systems Thinker"
+  },
+  "sections": [
+    {
+      "id": "landing",
+      "keywords": ["home", "landing", "0", "start"],
+      "label": "ATMOSPHERIC_INTELLIGENCE //",
+      "title": "FROM ANALOG PULP TO DIGITAL VOID.",
+      "lead": "Life changing words",
+      "imgSrc": "https://picsum.photos/1600/750.webp",
+      "imgAlt": "Hello",
+      "imgCaption": "Caption",
+
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
+        },
+        {
+          "type": "pullquote",
+          "text": "This section is totally radical and awesome."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this."
+        },
+        {
+          "type": "paragraph",
+          "text": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract."
+        },
+        {
+          "type": "paragraph",
+          "text": "The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced."
+        },
+        {
+          "type": "image",
+          "src": "https://picsum.photos/600/450.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth."
+        }
+      ],
+      "playlist": {
+        "text": "Words about this playlist",
+        "embed": "https://open.spotify.com/embed/playlist/0593iYGWirmHudcrFwuDNC?utm_source=generator"
+      },
+      "misc": ["Cool radical and funky", "Hello, cool dude"],
+      "tags": ["DESIGN", "TYPE", "SYSTEMS"]
+    },
+    {
+      "id": "background",
+      "keywords": ["home", "landing", "1", "start"],
+      "label": "ATMOSPHERIC_INTELLIGENCE //",
+      "title": "Radical Headline",
+      "lead": "Life changing words",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this."
+        },
+        {
+          "type": "paragraph",
+          "text": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract."
+        },
+        {
+          "type": "paragraph",
+          "text": "The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced."
+        },
+        {
+          "type": "image",
+          "src": "https://placeholder.pics/svg/300"
+        },
+        {
+          "type": "paragraph",
+          "text": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth."
+        }
+      ],
+      "tags": ["DESIGN", "TYPE", "SYSTEMS"]
+    },
+    {
+      "id": "first-design-job",
+      "keywords": [
+        "print",
+        "pip printing",
+        "factory",
+        "first job",
+        "design",
+        "origins",
+        "2"
+      ],
+      "label": "MY_FIRST_DESIGN_JOB //",
+      "title": "TRADING A 12-HOUR SHIFT\nFOR A NEW LIFE.",
+      "lead": "This is how I inadvertently kickstarted my design career.",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "After I graduated from high school, I was slowly reaching a crossroads for what my adult life might look like."
+        },
+        {
+          "type": "paragraph",
+          "text": "I had my professional pizza making career prematurely derailed when my manager when he \"couldn't put me on the schedule anymore due to the length of my hair.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "I'd spent close to a year working at a metal powder plat. The work itself was fascinating. I was learning so much about the metal powder production process. I was learning about quality assurance, I was learning rudimentary die setting skills, helping perform press changeovers and I learning how to prioritize competing priorities."
+        },
+        {
+          "type": "paragraph",
+          "text": "I will always be thankful for the team leads who took an interest in me during that factory job."
+        },
+        {
+          "type": "paragraph",
+          "text": "Despite learning and growing, there were issues. I was full-time, but I was also part-time. This boiled down to being ineligible for company-sponsored insurance. I'll never forget how the company sold this. \"This is an opportunity for you to take a look at us, and for us to take a look at you, allowing us both to determine if this a good long-term fit.\" Maybe not a big deal for an 18-year-old kid. A much larger consideration for many of my co-workers who were married with kids and needed the job."
+        },
+        {
+          "type": "paragraph",
+          "text": "I started looking for another job."
+        },
+        {
+          "type": "paragraph",
+          "text": "I can't remember how or why I applied for a job a Pip Printing. I knew nothing about printing or design. This might have been a strange choice. There had to be people who applied with prior experience. For some reason, Pip took a chance on this random kid who'd never touched a printing press."
+        },
+        {
+          "type": "paragraph",
+          "text": "I'm so thankful they did."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pip Printing opened my eyes to design in meaningful ways. I became interested in accurate execution and how important attention to detail was at every step in the process. Cutting corners in one part of the process could lead to an unhappy customer and a job that needed to be reprinted. Lost resources, lost revenue, unhappy bosses and disappointed co-workers. This didn't happen often, but it may have happened a time or two."
+        },
+        {
+          "type": "paragraph",
+          "text": "I learned to take pride in my execution and my role in the overall process."
+        },
+        {
+          "type": "paragraph",
+          "text": "This job helped me see a pathway to university, kicking off the weird strange journey that has taken me from Graphics Arts Management major to Journalism major to Newspaper designer and art director to builder of responsive websites to a design system practitioner."
+        },
+        {
+          "type": "paragraph",
+          "text": "I'm so thankful for everyone who crossed my path at this stage of my life. They might know it, but there are so many people who helped me become something more than a metal kid with an impressive mullet."
+        }
+      ],
+      "tags": ["PRINT", "CAREER", "ORIGINS"],
+      "misc": [
+        "Thinking about the next stage of life",
+        "Applying to Ball State University to study Graphic Arts Management.",
+        "Going to college after three-years working full-time in various jobs.",
+        "Appreciating the limitations of a life with solely a high school diploma"
+      ]
+    },
+    {
+      "id": "newspaper-to-tech",
+      "keywords": [
+        "newspaper",
+        "boston globe",
+        "html",
+        "css",
+        "upstatement",
+        "career change",
+        "tech",
+        "3"
+      ],
+      "label": "THE_RANDOM_LEARNING_OPPORTUNITY //",
+      "title": "HOW TWO WEEKS OF TRAINING\nENDED MY NEWSPAPER CAREER.",
+      "lead": "The random learning opportunity that jumpstarted my tech career.",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "I normally call my newspaper design and art direction portion of my career as \"my first career.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "Circa 2010, what I assume happened was that my boss was looking for ways to help his print-centric design team cross over into a more multi-disciplinary mode. The Boston Globe was was definitely not immune to the shrinking news hole (the number of pages in the paper), constricted resources and staff reductions that were experienced across the entire industry."
+        },
+        {
+          "type": "paragraph",
+          "text": "There was an opportunity for those who were interested to join a two-week bootcamp to learn rudimentary HTML and CSS. The goal of this bootcamp was to prepare us for making meaningful contributions to the Globe's website. I jumped on the opportunity."
+        },
+        {
+          "type": "paragraph",
+          "text": "These two-weeks opened me up to an entire, new world."
+        },
+        {
+          "type": "paragraph",
+          "text": "I began splitting my week between my normal print design projects and on projects for the Globe's site. Often the \"digital\" projects were boring tasks like creating images for new blogs (remember blogs?) or other random special digital projects. However, there was the occasional project that allowed me to dig in, think about story-telling, figure out how to bend the Globe CMS to my will and create unique special projects."
+        },
+        {
+          "type": "paragraph",
+          "text": "I then fully transitioned from print, becoming a Senior Designer for Boston.com / Bostonglobe.com. This is when I really began to think deeply about authoring and architecting CSS. For many projects I worked on, it was often unclear whether it would run on the fixed-width boston.com or the responsive bostonglobe.com. I was building everything flexible enough that they could very easily be moved from one site to another; something that happened more often than you might guess."
+        },
+        {
+          "type": "paragraph",
+          "text": "I began to see an exit ramp from newspapers. Not that I didn't love working for a news organization. I still miss it. It will always be a part of my identity and how I think about myself."
+        },
+        {
+          "type": "paragraph",
+          "text": "But I knew I needed to \"re-invent\" myself a little. I was lucky to land at Upstatement. At this point in Upstatement's history, they were doing a lot of responsive redesigns for editorially-focused clients. It was the perfect next move for me."
+        },
+        {
+          "type": "pullquote",
+          "text": "We've been as lucky as we've been good."
+        },
+        {
+          "type": "paragraph",
+          "text": "During my interview, I remember one of the founders commenting that 'We've been as lucky as we've been good.' This quote has always stuck with me. In the moment, I thought it was an incredibly insightful take on the early success that Upstatement had as a company. Also, it's a sentiment that truly matches my journey. I've had opportunities and exposure that people much more talented than myself, never get. I'm thankful and proud."
+        }
+      ],
+      "tags": ["NEWSPAPERS", "CSS", "CAREER"],
+      "misc": [
+        "Truly digging into systems thinking and scalable CSS architecture",
+        "Each Upstatement project pushed me beyond what I thought I might be capable of before the engagement began",
+        "When I completed my first project at Upstatement, I was awarded a framed photo of something related to that project. This was one of the most meaningful (and funny) work-related gifts I've ever received."
+      ]
+    }
+  ],
+  "offline": {
+    "id": "offline",
+    "label": "SESSION_TERMINATED //",
+    "title": "THE SUBJECT\nHAS LEFT THE BUILDING.",
+    "message": "The interrogation is complete. All files have been sealed. The subject has returned to the analog.",
+    "cta": "REINITIATE SESSION"
+  },
+  "chat": {
+    "panelTitle": "THE INTERROGATION",
+    "statusLabel": "STATUS: SECURE",
+    "welcome": "SIGNAL ESTABLISHED.\n\nWelcome to The Interrogation. I am the interface between you and the subject.\n\nState your directive:\n\n  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL to access all files simultaneously.\nType EXIT to terminate the session.",
+    "options": "  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL / EXIT.",
+    "unknown": "SIGNAL UNCLEAR. Input not recognized.",
+    "exitMessage": "SESSION TERMINATED.\n\nThank you for the interrogation. The subject has gone offline.\n\nType RESTART to reinitiate the sequence.",
+    "scrollActivated": "SCROLL MODE ACTIVATED.\nAll files now accessible simultaneously.\n\nType CHAT to return to directed mode.",
+    "chatRestored": "DIRECTED MODE RESTORED.\n\nSelect your next directive:\n\n  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS",
+    "restart": "SEQUENCE REINITIATING...\n// session restored\n\nSIGNAL ESTABLISHED. Welcome back.\n\n  1 — BACKGROUND\n  2 — WORK\n  3 — PHILOSOPHY\n  4 — SKILLS\n\nOr type SCROLL / EXIT.",
+    "accessing": "ACCESSING FILE:"
+  }
+}

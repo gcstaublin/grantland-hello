@@ -1,0 +1,133 @@
+---
+const { meta } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="header-brand">
+    <!-- <span class="arrow">←</span> -->
+    <span class="name">{meta.name}</span>
+    <span class="vol">// {meta.vol}</span>
+  </div>
+
+  <div class="header-section-label" id="header-section-label"></div>
+
+  <nav class="header-nav">
+    <button class="header-icon-btn" id="theme-toggle" aria-label="Toggle theme">
+      <svg
+        width="115"
+        height="115"
+        viewBox="0 0 115 115"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M57.75 15V32.9687M72.125 15V36.5625M46.9687 82.0833V96.4583C46.9686 97.4023 47.1544 98.337 47.5155 99.2091C47.8767 100.081 48.4061 100.874 49.0736 101.541C49.741 102.208 50.5334 102.738 51.4055 103.099C52.2776 103.46 53.2123 103.646 54.1562 103.646H61.3437C63.2502 103.646 65.0783 102.889 66.4259 101.54C67.0934 100.873 67.623 100.081 67.9842 99.2089C68.3454 98.3369 68.5313 97.4022 68.5312 96.4583V82.0833M29 59.3229V71.3021C28.9998 72.246 29.1856 73.1807 29.5468 74.0528C29.9079 74.9249 30.4374 75.7173 31.1048 76.3848C31.7723 77.0522 32.5647 77.5816 33.4368 77.9428C34.3089 78.3039 35.2436 78.4897 36.1875 78.4896H79.3125C81.219 78.4896 83.047 77.7325 84.3947 76.3842C85.0622 75.7169 85.5917 74.9246 85.953 74.0526C86.3142 73.1806 86.5001 72.246 86.5 71.3021V59.4122L29 59.3229ZM29 59.3229V29.375C29 25.5625 30.5145 21.9062 33.2103 19.2103C35.9062 16.5145 39.5625 15 43.375 15H86.5V59.3229H29Z"
+          stroke="currentColor"
+          stroke-width="7.1875"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
+    <!-- <button class="header-icon-btn" aria-label="Terminal">
+      <svg
+        width="115"
+        height="115"
+        viewBox="0 0 115 115"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21.1 93.8C18.5975 93.8 16.4552 92.909 14.6731 91.1269C12.891 89.3448 12 87.2025 12 84.7V30.1C12 27.5975 12.891 25.4552 14.6731 23.6731C16.4552 21.891 18.5975 21 21.1 21H93.9C96.4025 21 98.5448 21.891 100.327 23.6731C102.109 25.4552 103 27.5975 103 30.1V84.7C103 87.2025 102.109 89.3448 100.327 91.1269C98.5448 92.909 96.4025 93.8 93.9 93.8H21.1ZM21.1 84.7H93.9V39.2H21.1V84.7ZM37.025 80.15L30.655 73.78L42.3713 61.95L30.5412 50.12L37.025 43.75L55.225 61.95L37.025 80.15ZM57.5 80.15V71.05H84.8V80.15H57.5Z"
+          fill="currentColor"></path>
+      </svg>
+    </button> -->
+  </nav>
+</header>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .site-header {
+    grid-column: 1 / -1;
+    position: relative;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    z-index: 10;
+  }
+
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  /* .header-brand .arrow {
+    opacity: 0.4;
+    font-size: 14px;
+  } */
+
+  .header-brand .name {
+    color: var(--text);
+  }
+
+  .header-brand .vol {
+    color: var(--text-muted);
+    margin-left: 4px;
+  }
+
+  .header-section-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    min-height: 14px;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+
+  .header-icon-btn {
+    background: transparent;
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    padding: 6px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .header-icon-btn:hover {
+    color: var(--text);
+    border-color: var(--text-muted);
+  }
+
+  .header-icon-btn svg {
+    width: 17px;
+    height: 17px;
+    display: block;
+  }
+</style>

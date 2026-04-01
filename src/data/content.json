@@ -165,6 +165,9 @@
       "label": "// THE_RANDOM_LEARNING_OPPORTUNITY //",
       "title": "HOW TWO WEEKS OF TRAINING ENDED MY NEWSPAPER CAREER",
       "lead": "The random learning opportunity that jumpstarted my tech career",
+      "imgSrc": "/nieman.webp",
+      "imgAlt": "A website design",
+      "imgCaption": "Without HTML and CSS, I never would have joined Upstatement or got to work on projects for clients like the Nieman Foundation",
       "body": [
         {
           "type": "paragraph",

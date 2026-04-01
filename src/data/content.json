@@ -80,8 +80,11 @@
         "1"
       ],
       "label": "// MY_FIRST_DESIGN_JOB //",
-      "title": "TRADING A 12-HOUR SHIFT\nFOR A NEW LIFE.",
-      "lead": "This is how I inadvertently kickstarted my design career.",
+      "title": "TRADING A 12-HOUR SHIFT FOR A NEW LIFE",
+      "lead": "This is how I inadvertently kickstarted my design career",
+      "imgSrc": "/press.webp",
+      "imgAlt": "Image of a printing press",
+      "imgCaption": "This is not the actual printer I ran",
       "body": [
         {
           "type": "paragraph",
@@ -110,6 +113,10 @@
         {
           "type": "paragraph",
           "text": "I can't remember how or why I applied for a job a Pip Printing. I knew nothing about printing or design. This might have been a strange choice. There had to be people who applied with prior experience. For some reason, Pip took a chance on this random kid who'd never touched a printing press."
+        },
+        {
+          "type": "image",
+          "src": "/ab-dick-press.webp"
         },
         {
           "type": "paragraph",
@@ -152,9 +159,9 @@
         "tech",
         "2"
       ],
-      "label": "THE_RANDOM_LEARNING_OPPORTUNITY //",
-      "title": "HOW TWO WEEKS OF TRAINING\nENDED MY NEWSPAPER CAREER.",
-      "lead": "The random learning opportunity that jumpstarted my tech career.",
+      "label": "// THE_RANDOM_LEARNING_OPPORTUNITY //",
+      "title": "HOW TWO WEEKS OF TRAINING ENDED MY NEWSPAPER CAREER",
+      "lead": "The random learning opportunity that jumpstarted my tech career",
       "body": [
         {
           "type": "paragraph",

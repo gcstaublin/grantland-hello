@@ -28,7 +28,7 @@ const { section, isDefault = false } = Astro.props;
             />
             {section.imgCaption && (
               <figcaption class="hero__image-caption accent--small">
-                {section.imgCaption} xxx
+                {section.imgCaption}
               </figcaption>
             )}
           </figure>
@@ -92,9 +92,8 @@ const { section, isDefault = false } = Astro.props;
 
     {
       section.playlist && (
-        <div>
-          <p>{section.playlist.text}Dude</p>
-          <div>
+        <div class="playlist">
+          <div class="playlist__embed">
             <iframe
               data-testid="embed-iframe"
               style="border-radius:12px"
@@ -107,6 +106,7 @@ const { section, isDefault = false } = Astro.props;
               loading="lazy"
             />
           </div>
+          <p class="playlist__text accent--small">{section.playlist.text}</p>
         </div>
       )
     }

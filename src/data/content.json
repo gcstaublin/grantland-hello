@@ -64,7 +64,7 @@
         }
       ],
       "playlist": {
-        "text": "Words about this playlist",
+        "text": "Jammy Jamz is one of my oldest Spotify playlists. It's not indicative of my daily listening, but it survives for a reason.",
         "embed": "https://open.spotify.com/embed/playlist/5NlWmghBXC0JJmxmeXwF7g?utm_source=generator"
       },
       "tags": ["DESIGN", "TYPE", "SYSTEMS"]
@@ -214,6 +214,49 @@
         "Each Upstatement project pushed me beyond what I thought I might be capable of before the engagement began",
         "When I completed my first project at Upstatement, I was awarded a framed photo of something related to that project. This was one of the most meaningful (and funny) work-related gifts I've ever received."
       ]
+    },
+    {
+      "id": "long-distance-running",
+      "keywords": [
+        "running",
+        "health",
+        "marathons",
+        "determination",
+        "inner peace",
+        "3"
+      ],
+      "label": "// THE RESTORATIVE NATURE OF LONG RUNS //",
+      "title": "The loneliness of the long distance runner",
+      "lead": "Much of myself is wrapped in the hours I've spent pushing",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Hopefully you recognize the title of this story as an Iron Maiden song. If you did my younger, inner metalhead is really excited."
+        },
+        {
+          "type": "paragraph",
+          "text": "More to come"
+        }
+      ],
+      "tags": ["RUNNING"]
+    },
+    {
+      "id": "remote-work",
+      "keywords": ["remote work", "flexibility", "focus", "determination", "4"],
+      "label": "// THE SHORT COMMUTE //",
+      "title": "The benefits of hybrid work",
+      "lead": "I love the flexibility of remote work, but value the opportunity for in-person collaboration",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "In early 2020, like most of us, I quickly shifted from five days a week in office to barely leaving the house. 2018. The abrupt shift."
+        },
+        {
+          "type": "paragraph",
+          "text": "More to come"
+        }
+      ],
+      "tags": ["WORK"]
     }
   ],
   "offline": {

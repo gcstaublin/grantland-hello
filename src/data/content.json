@@ -26,7 +26,8 @@
         },
         {
           "type": "image",
-          "src": "/believe-it.webp"
+          "src": "/believe-it.webp",
+          "caption": "This page was in the background of a scene in The Departed."
         },
         {
           "type": "paragraph",
@@ -51,7 +52,7 @@
         },
         {
           "type": "pullquote",
-          "text": "The only question then is whether any of this content is interesting to you."
+          "text": "The question is whether any of this content will be interesting to you."
         },
         {
           "type": "paragraph",
@@ -116,7 +117,8 @@
         },
         {
           "type": "image",
-          "src": "/ab-dick-press.webp"
+          "src": "/ab-dick-press.webp",
+          "caption": "The type of printing press I operated daily"
         },
         {
           "type": "paragraph",
@@ -140,6 +142,7 @@
         }
       ],
       "tags": ["PRINT", "CAREER", "ORIGINS"],
+      "miscTitle": "Rethinking my young life",
       "misc": [
         "Thinking about the next stage of life",
         "Applying to Ball State University to study Graphic Arts Management.",
@@ -205,6 +208,7 @@
         }
       ],
       "tags": ["NEWSPAPERS", "CSS", "CAREER"],
+      "miscTitle": "Misc",
       "misc": [
         "Truly digging into systems thinking and scalable CSS architecture",
         "Each Upstatement project pushed me beyond what I thought I might be capable of before the engagement began",

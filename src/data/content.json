@@ -64,8 +64,8 @@
         }
       ],
       "playlist": {
-        "text": "Words about this playlist",
-        "embed": "https://open.spotify.com/embed/playlist/0593iYGWirmHudcrFwuDNC?utm_source=generator"
+        "text": "Jammy Jamz is one of my oldest Spotify playlists. It's not indicative of my daily listening, but it survives for a reason.",
+        "embed": "https://open.spotify.com/embed/playlist/5NlWmghBXC0JJmxmeXwF7g?utm_source=generator"
       },
       "tags": ["DESIGN", "TYPE", "SYSTEMS"]
     },
@@ -83,9 +83,9 @@
       "label": "// MY_FIRST_DESIGN_JOB //",
       "title": "TRADING A 12-HOUR SHIFT FOR A NEW LIFE",
       "lead": "This is how I inadvertently kickstarted my design career",
-      "imgSrc": "/press.webp",
+      "imgSrc": "/press-crop2.webp",
       "imgAlt": "Image of a printing press",
-      "imgCaption": "This is not the actual printer I ran",
+      "imgCaption": "A cool image of printer. Not the machine I ran on a daily basis",
       "body": [
         {
           "type": "paragraph",
@@ -214,6 +214,55 @@
         "Each Upstatement project pushed me beyond what I thought I might be capable of before the engagement began",
         "When I completed my first project at Upstatement, I was awarded a framed photo of something related to that project. This was one of the most meaningful (and funny) work-related gifts I've ever received."
       ]
+    },
+    {
+      "id": "long-distance-running",
+      "keywords": [
+        "running",
+        "health",
+        "marathons",
+        "determination",
+        "inner peace",
+        "3"
+      ],
+      "label": "// THE RESTORATIVE NATURE OF LONG RUNS //",
+      "title": "The loneliness of the long distance runner",
+      "lead": "Much of myself is wrapped in the hours I've spent pushing",
+      "imgSrc": "/marathon.webp",
+      "imgAlt": "Runners enjoying a marathon",
+      "imgCaption": "26.2 miles is a long distance",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Hopefully you recognize the title of this story as an Iron Maiden song. If you did my younger, inner metalhead is really excited."
+        },
+        {
+          "type": "paragraph",
+          "text": "More to come"
+        }
+      ],
+      "tags": ["RUNNING"]
+    },
+    {
+      "id": "remote-work",
+      "keywords": ["remote work", "flexibility", "focus", "determination", "4"],
+      "label": "// THE SHORT COMMUTE //",
+      "title": "The benefits of hybrid work",
+      "lead": "I love the flexibility of remote work, but value the opportunity for in-person collaboration",
+      "imgSrc": "/grant-desk.webp",
+      "imgAlt": "Grant's desk",
+      "imgCaption": "Since 2020, my desk has become more and more like a TV studio",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "In early 2020, like most of us, I quickly shifted from five days a week in office to barely leaving the house. 2018. The abrupt shift."
+        },
+        {
+          "type": "paragraph",
+          "text": "More to come"
+        }
+      ],
+      "tags": ["WORK"]
     }
   ],
   "offline": {

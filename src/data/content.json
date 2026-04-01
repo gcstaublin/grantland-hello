@@ -2,88 +2,70 @@
   "meta": {
     "name": "Grant_Staublin",
     "vol": "About_me",
-    "tagline": "Designer, Writer, Systems Thinker"
+    "tagline": "Design, Technology, Systems Thinking"
   },
   "sections": [
     {
       "id": "landing",
       "keywords": ["home", "landing", "0", "start"],
-      "label": "ATMOSPHERIC_INTELLIGENCE //",
-      "title": "FROM ANALOG PULP TO DIGITAL VOID.",
-      "lead": "Life changing words",
-      "imgSrc": "https://picsum.photos/1600/750.webp",
-      "imgAlt": "Hello",
-      "imgCaption": "Caption",
+      "label": "// NOW ENTERING GRANTLAND //",
+      "title": "A place for grant to talk about grant",
+      "lead": "These are hard words to write. I love to talk about myself. I also hate it.",
+      "imgSrc": "/grant-intro.webp",
+      "imgAlt": "Grant at logan",
+      "imgCaption": "This guy is really excited to be at the airport",
 
       "body": [
         {
           "type": "paragraph",
-          "text": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
-        },
-        {
-          "type": "pullquote",
-          "text": "This section is totally radical and awesome."
+          "text": "The about me sections of most websites are boring. I mean who cares, really. Does it matter to you that I grew up in Southern Indiana? How original is my love of pizza? If I barely run today, is it interesting that I've run a couple full marathons and numerous half marathons? Is it cool that a newspaper page I once designed was in the background of a scene in a Martin Scorsese film? I guess that might be kind of cool."
         },
         {
           "type": "paragraph",
-          "text": "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this."
-        },
-        {
-          "type": "paragraph",
-          "text": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract."
-        },
-        {
-          "type": "paragraph",
-          "text": "The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced."
+          "text": "See what I'm saying about loathing to talk about myself while simultaneously jumping right into all the important things I think you need to know about me?"
         },
         {
           "type": "image",
-          "src": "https://picsum.photos/600/450.webp"
+          "src": "/believe-it.webp"
         },
         {
           "type": "paragraph",
-          "text": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth."
+          "text": "Conceptually, I wanted this About Me page to attempt to capture a few pivotal moments that ultimately shaped my career and led me to this exact moment, as I sit on the couch at 8 p.m. writing this intro, listening to Diarrhea Planet. I'm going to skip the story about almost drowning when I was five. That really didn't have any impact on my design career, while also being a key moment that lets me bore you with my story."
+        },
+        {
+          "type": "paragraph",
+          "text": "Grant really went for the cool points with the DP reference. Ask him to spell diarrhea without looking it up. Who says that the public schools of southern Indiana aren't top notch."
+        },
+        {
+          "type": "paragraph",
+          "text": "From a story-telling point of view I want to attempt to tell you something interesting. Think about my life beyond what you've already learned about me while perusing my LinkedIn."
+        },
+
+        {
+          "type": "paragraph",
+          "text": "From a conceptual or creative point of view I wanted to make the site interactive, or at least fake some artificial interactivity."
+        },
+        {
+          "type": "paragraph",
+          "text": "The chat panel gives you control over what you see. If the chat seems like an affectation you don't care to engage with, I get it. Just type SCROLL and the main interface will turn into a normal scrolling content area."
+        },
+        {
+          "type": "pullquote",
+          "text": "The only question then is whether any of this content is interesting to you."
+        },
+        {
+          "type": "paragraph",
+          "text": "In all seriousness, I hope you enjoy this site. Like most ideas it seemed like the best idea two days ago. Now that I'm in it, I have doubts. There's no reason to let self-doubt keep me from half finishing this half-baked idea, is there?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Enjoy."
         }
       ],
       "playlist": {
         "text": "Words about this playlist",
         "embed": "https://open.spotify.com/embed/playlist/0593iYGWirmHudcrFwuDNC?utm_source=generator"
       },
-      "misc": ["Cool radical and funky", "Hello, cool dude"],
-      "tags": ["DESIGN", "TYPE", "SYSTEMS"]
-    },
-    {
-      "id": "background",
-      "keywords": ["home", "landing", "1", "start"],
-      "label": "ATMOSPHERIC_INTELLIGENCE //",
-      "title": "Radical Headline",
-      "lead": "Life changing words",
-      "body": [
-        {
-          "type": "paragraph",
-          "text": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
-        },
-        {
-          "type": "paragraph",
-          "text": "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this."
-        },
-        {
-          "type": "paragraph",
-          "text": "But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract."
-        },
-        {
-          "type": "paragraph",
-          "text": "The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced."
-        },
-        {
-          "type": "image",
-          "src": "https://placeholder.pics/svg/300"
-        },
-        {
-          "type": "paragraph",
-          "text": "It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth."
-        }
-      ],
       "tags": ["DESIGN", "TYPE", "SYSTEMS"]
     },
     {
@@ -95,9 +77,9 @@
         "first job",
         "design",
         "origins",
-        "2"
+        "1"
       ],
-      "label": "MY_FIRST_DESIGN_JOB //",
+      "label": "// MY_FIRST_DESIGN_JOB //",
       "title": "TRADING A 12-HOUR SHIFT\nFOR A NEW LIFE.",
       "lead": "This is how I inadvertently kickstarted my design career.",
       "body": [
@@ -168,7 +150,7 @@
         "upstatement",
         "career change",
         "tech",
-        "3"
+        "2"
       ],
       "label": "THE_RANDOM_LEARNING_OPPORTUNITY //",
       "title": "HOW TWO WEEKS OF TRAINING\nENDED MY NEWSPAPER CAREER.",

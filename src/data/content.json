@@ -271,7 +271,7 @@
   "offline": {
     "id": "offline",
     "label": "SESSION_TERMINATED //",
-    "title": "THE SUBJECT\nHAS LEFT THE BUILDING.",
+    "title": "THE SUBJECT HAS LEFT THE BUILDING.",
     "message": "The interrogation is complete. All files have been sealed. The subject has returned to the analog.",
     "cta": "REINITIATE SESSION"
   },

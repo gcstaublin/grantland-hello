@@ -226,22 +226,47 @@
         "marathons",
         "determination",
         "inner peace",
+        "new orleans",
         "3"
       ],
       "label": "// THE RESTORATIVE NATURE OF LONG RUNS //",
       "title": "The loneliness of the long distance runner",
-      "lead": "Much of myself is wrapped in the hours I've spent pushing",
+      "lead": "The streets of New Orleans taught me things about myself that I carry with me today",
       "imgSrc": "/marathon.webp",
       "imgAlt": "Runners enjoying a marathon",
       "imgCaption": "26.2 miles is a long distance",
       "body": [
         {
           "type": "paragraph",
-          "text": "Hopefully you recognize the title of this story as an Iron Maiden song. If you did my younger, inner metalhead is really excited."
+          "text": "After college, I started my career at the Times-Picayune in New Orleans."
         },
         {
           "type": "paragraph",
-          "text": "More to come"
+          "text": "Fully stepping into adulthood in a city like New Orleans was an interesting experience. I'll be honest, I didn't immediately love the city. Finding common ground was a struggle. It took a couple years."
+        },
+        {
+          "type": "paragraph",
+          "text": "Two things helped me find my place."
+        },
+        {
+          "type": "paragraph",
+          "text": "The first was \"a dancer\" I chatted with one night in my neighborhood bar. She talked about the city like a person, referring to the city as 'she.' Seeing New Orleans as a living relationship, and not a collection of buildings, ramshackle streets and above-ground cemeteries helped me view the city through a different lens."
+        },
+        {
+          "type": "paragraph",
+          "text": "The other was developing a love of running. The hours I spent running through neighborhoods helped me experience neighborhoods I wouldn't otherwise pass through during my day to day."
+        },
+        {
+          "type": "paragraph",
+          "text": "Running helped me refine my relationship to discipline. It helped me think through external stressors and find an outlet that helped keep those stressors from taking over my emotional well-being."
+        },
+        {
+          "type": "paragraph",
+          "text": "I went on to run two full marathons during my six years in New Orleans."
+        },
+        {
+          "type": "paragraph",
+          "text": "These days I don't run as often as that time of my life, but I'll always have that connection to long distance running. A couple years ago, I strung together a year-plus running streak of running at least one-mile. The streak was in jeopardy when I came down with a slight case of the covid. The smart thing might have been to let the streak lapse. My inner runner would not let me."
         }
       ],
       "tags": ["RUNNING"]
@@ -250,7 +275,7 @@
       "id": "remote-work",
       "keywords": ["remote work", "flexibility", "focus", "determination", "4"],
       "label": "// THE SHORT COMMUTE //",
-      "title": "The benefits of hybrid work",
+      "title": "The commute is optional but the focus isn't",
       "lead": "I love the flexibility of remote work, but value the opportunity for in-person collaboration",
       "imgSrc": "/grant-desk.webp",
       "imgAlt": "Grant's desk",
@@ -258,11 +283,51 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "In early 2020, like most of us, I quickly shifted from five days a week in office to barely leaving the house. 2018. The abrupt shift."
+          "text": "In March 2020, I traded an hour-long commute and five days in office for the freedom of working from home and a commute that took 20 seconds on a slow day."
         },
         {
           "type": "paragraph",
-          "text": "More to come"
+          "text": "I was living the dream, as they say."
+        },
+        {
+          "type": "paragraph",
+          "text": "This wasn't my first time working remote. In 2016, we moved from Boston to the Berkshires. As part of the move, I had to outline a thoughtful proposal, outlining how I planned to remain effective as a remote worker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Writing this proposal forced me to think about focus and productivity as well as the components of my home office setup. At the time, I remember the requirement of scoping out my remote life as a hoop to jump through."
+        },
+        {
+          "type": "paragraph",
+          "text": "However, the exercise of thinking through these particulars and viewing the ability to work from home as a privilege rather than a right made me more effective and thankful for the opportunity."
+        },
+        {
+          "type": "paragraph",
+          "text": "I found tools to separate my personal life from my professional life. Each morning I would take a fifteen minute walk to stimulate a morning commute and another walk at 5 p.m. to mark the end of the workday. This simple act helped me compartmentalize the two lives that now shared the same roof."
+        },
+        {
+          "type": "paragraph",
+          "text": "My prior experience was helpful for the 2020 pivot. I'll be honest, this was not a seamless pivot. The unexpected nature made the shift feel abrupt. Finding focus wasn't instantaneous."
+        },
+        {
+          "type": "paragraph",
+          "text": "I quickly found my remote groove and re-learned how to appreciate the flexibility of remote work while also maintaining the focus."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the past six years, my desk has slowly morphed into a tv studio. First I added an external mic. Then an external web cam. Then upgrades for both the mic and the webcam. I traded my stationary desk for an adjustable standing desk. A key light."
+        },
+        {
+          "type": "paragraph",
+          "text": "Overall, these iterative improvements matches how I approach work. Small progressions of impactful improvements without getting bogged down into perfect."
+        },
+        {
+          "type": "paragraph",
+          "text": "Early this Spring, I travel to Vienna for a work trip. During the two weeks in Vienna I grew to appreciate the act of going into the office. Granted, walking European streets every morning has its own charm. But the appreciation was greater than this novelty. The ability to roll my chair over to a co-worker and look at their screen is an invaluable benefit of maintaining an in person existence with your teammates."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eventually, I hope to find a working situation where I can enjoy the flexibility of remote work while also benefit from in person collaboration."
         }
       ],
       "tags": ["WORK"]

@@ -182,8 +182,9 @@
   --chat-surface: #141414;
   --chat-border: #1c1c1c;
   --chat-foreground: var(--text-dim);
-  --chat-surface-user: #00677D;
-  --chat-foreground-user: yellow;
+  /* --chat-surface-user: #00677D; */
+  --chat-surface-user: rgba(0, 156, 227, 0.8);
+  --chat-foreground-user: var(--text);
 
   --header-h: 100px;
   --chat-w: 360px;
@@ -648,6 +649,12 @@ body {
    /* max-width: 80%; */
    /* word-break: break-word; */
    /* color: cyan; */
+  font-family: var(--font-sans);
+  font-size: var(--body-size-200);
+  font-weight: var(--font-weight-400);
+  border-radius: 6px;
+  padding-block: 0.25rem;
+  text-transform: capitalize;
  }
 
  .chat-msg-timestamp {

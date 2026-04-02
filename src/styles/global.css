@@ -867,26 +867,27 @@ body {
  }
 
  .offline-title {
-   font-family: var(--font-condensed);
-   font-size: clamp(36px, 5vw, 60px);
+   font-family: var(--font-accent);
+  font-size: clamp(60px, 6vw, 96px);
    font-weight: 800;
    line-height: 0.92;
    letter-spacing: -0.01em;
    text-transform: uppercase;
-   color: var(--text);
    margin-bottom: 28px;
    white-space: pre-line;
+   color: var(--text);
+   text-wrap: balance;
  }
 
  .offline-message {
-   font-family: var(--font-serif);
-   font-size: 13px;
-   font-weight: 300;
-   line-height: 1.8;
+   /* font-family: var(--font-sans); */
+   /* font-size: 13px; */
+   /* font-weight: 300; */
+   /* line-height: 1.8; */
    color: var(--text-dim);
-   max-width: 420px;
-   margin-bottom: 40px;
-   font-style: italic;
+   /* max-width: 420px; */
+   /* margin-bottom: 40px; */
+   /* font-style: italic; */
  }
 
  .offline-cta {
@@ -907,6 +908,19 @@ body {
    opacity: 0.85;
  }
 
+
+ .offline-video {
+   width: 100%;
+   aspect-ratio: 16 / 9;
+   margin: 0 0 40px;
+   margin-block-start: 4rem;
+ }
+
+ .offline-video iframe {
+   width: 100%;
+   height: 100%;
+   border: none;
+ }
 
 
 

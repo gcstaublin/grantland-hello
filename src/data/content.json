@@ -8,7 +8,7 @@
     {
       "id": "landing",
       "keywords": ["home", "landing", "0", "start"],
-      "label": "// NOW ENTERING GRANTLAND //",
+      "label": "// NOW ENTERING GRANTLAND  // ",
       "title": "A place for grant to talk about grant",
       "lead": "These are hard words to write. I love to talk about myself. I also hate it.",
       "imgSrc": "/grant-intro.webp",
@@ -80,7 +80,7 @@
         "origins",
         "1"
       ],
-      "label": "// MY_FIRST_DESIGN_JOB //",
+      "label": "// MY FIRST DESIGN JOB //",
       "title": "TRADING A 12-HOUR SHIFT FOR A NEW LIFE",
       "lead": "This is how I inadvertently kickstarted my design career",
       "imgSrc": "/press-crop2.webp",
@@ -162,7 +162,7 @@
         "tech",
         "2"
       ],
-      "label": "// THE_RANDOM_LEARNING_OPPORTUNITY //",
+      "label": "// THE UNEXPECTED LEARNING OPPORTUNITY //",
       "title": "HOW TWO WEEKS OF TRAINING ENDED MY NEWSPAPER CAREER",
       "lead": "The random learning opportunity that jumpstarted my tech career",
       "imgSrc": "/nieman.webp",
@@ -335,7 +335,7 @@
   ],
   "offline": {
     "id": "offline",
-    "label": "SESSION_TERMINATED //",
+    "label": "SESSION_TERMINATED",
     "title": "THE SUBJECT HAS LEFT THE BUILDING.",
     "message": "The interrogation is complete. All files have been sealed. The subject has returned to the analog.",
     "cta": "REINITIATE SESSION"

@@ -138,11 +138,11 @@ const { section, isDefault = false } = Astro.props;
   .content-section {
     display: none;
     opacity: 0;
+    min-height: calc(100vh - var(--header-h));
     transform: translateY(16px);
     transition:
       opacity 0.45s ease,
       transform 0.45s ease;
-    min-height: calc(100vh - var(--header-h));
 
     &.is-visible {
       display: block;
@@ -217,9 +217,9 @@ const { section, isDefault = false } = Astro.props;
   }
 
   .section-label {
+    display: none;
     letter-spacing: 0.18em;
     color: var(--text-muted);
-    display: none;
   }
 
   .section-title {
@@ -260,6 +260,9 @@ const { section, isDefault = false } = Astro.props;
   }
 
   .section-pullquote {
+    margin: 28px 0;
+    padding-block-end: 1.5rem;
+    border-block-end: 1px solid var(--border-light);
     font-family: var(--font-accent);
     /* font-size: clamp(22px, 3vw, 30px); */
     font-size: clamp(18px, 3vw, 30px);
@@ -267,11 +270,8 @@ const { section, isDefault = false } = Astro.props;
     line-height: 1.15;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    border-block-end: 1px solid var(--border-light);
-    padding-block-end: 1.5rem;
-    margin: 28px 0;
-    color: var(--text-muted);
     text-wrap: balance;
+    color: var(--text-muted);
   }
 
   .section-image-block {
@@ -280,9 +280,9 @@ const { section, isDefault = false } = Astro.props;
   }
 
   .section-image-block img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
   }
 
   .section-image-caption,
@@ -327,14 +327,14 @@ const { section, isDefault = false } = Astro.props;
 
   /* ─── Section: Misc ──────────────────────────────────────── */
   .misc {
-    background-color: var(--surface);
+    overflow: hidden;
     padding: 1rem;
     padding-inline-start: 3rem;
     padding-block-start: 2rem;
     padding-block-end: 2rem;
+    background-color: var(--surface);
     border-radius: 1.25rem;
     corner-shape: bevel square;
-    overflow: hidden;
     outline-style: solid;
     outline-width: 4px;
     outline-offset: -8px;

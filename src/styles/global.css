@@ -30,6 +30,9 @@
   --chat-foreground: var(--text-dim);
   --chat-surface-user: rgba(0, 156, 227, 0.8);
   --chat-foreground-user: var(--text);
+  --chat-dot-bg-active: #4caf50;
+  --chat-dot-shadow-active: rgba(76, 175, 80, 0.4);
+  --chat-dot-bg-offline: #666;
 }
 
 
@@ -474,13 +477,13 @@ grid-area: aside;
 }
 
 .chat-status-dot.active {
-  background: #4caf50;
-  box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+  background: var(--chat-dot-bg-active);
+  box-shadow: 0 0 6px var(--chat-dot-shadow-active);
   animation: pulse 2s ease-in-out infinite;
 }
 
 .chat-status-dot.offline {
-  background: #666;
+  background: var(--chat-dot-bg-active);
 }
 
 @keyframes pulse {
@@ -538,16 +541,16 @@ grid-area: aside;
 
 
 .chat-msg-bubble {
-background-color: var(--chat-surface);
-border: 1px solid var(--chat-border);
-padding: 10px 12px;
-font-family: var(--font-mono);
-font-size: 10.5px;
-font-weight: 400;
-line-height: 1.75;
-color: var(--chat-foreground);
-white-space: pre-wrap;
-word-break: break-word;
+  background-color: var(--chat-surface);
+  border: 1px solid var(--chat-border);
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--chat-foreground);
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .chat-msg-user {
@@ -821,7 +824,7 @@ text-transform: capitalize;
 
 .offline-title {
   font-family: var(--font-accent);
-font-size: clamp(60px, 6vw, 80px);
+  font-size: clamp(60px, 6vw, 80px);
   font-weight: 800;
   line-height: 0.92;
   letter-spacing: -0.01em;
@@ -833,16 +836,16 @@ font-size: clamp(60px, 6vw, 80px);
   text-wrap: balance;
 }
 
- .offline-message {
-   /* font-family: var(--font-sans); */
-   /* font-size: 13px; */
-   /* font-weight: 300; */
-   /* line-height: 1.8; */
-   color: var(--text-dim);
-   /* max-width: 420px; */
-   /* margin-bottom: 40px; */
-   /* font-style: italic; */
- }
+.offline-message {
+  /* font-family: var(--font-sans); */
+  /* font-size: 13px; */
+  /* font-weight: 300; */
+  /* line-height: 1.8; */
+  color: var(--text-dim);
+  /* max-width: 420px; */
+  /* margin-bottom: 40px; */
+  /* font-style: italic; */
+}
 
 .offline-cta {
   font-family: var(--font-mono);

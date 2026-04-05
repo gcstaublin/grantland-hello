@@ -1,15 +1,23 @@
 ---
 const { meta } = Astro.props;
+import DividerAccent from "./DividerAccent.astro";
 ---
 
 <header class="site-header">
   <div class="header-brand">
     <!-- <span class="arrow">←</span> -->
     <span class="name">{meta.name}</span>
-    <span class="vol">// {meta.vol}</span>
+    <span class="vol">
+      <DividerAccent />
+      {meta.vol}
+    </span>
   </div>
 
-  <div class="header-section-label" id="header-section-label"></div>
+  <div class="header-section-label">
+    <!-- <DividerAccent /> -->
+    <h3 id="header-section-label"></h3>
+    <!-- <DividerAccent /> -->
+  </div>
 
   <nav class="header-nav">
     <button class="header-icon-btn" id="theme-toggle" aria-label="Toggle theme">
@@ -90,15 +98,25 @@ const { meta } = Astro.props;
   }
 
   .header-section-label {
+    display: flex;
+    gap: 1rem;
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 400;
+    line-height: 1;
     letter-spacing: 0.1em;
     color: var(--text-muted);
     text-transform: uppercase;
     text-align: center;
     transition: opacity 0.3s ease;
     min-height: 14px;
+
+    & h3 {
+      margin-block-start: 0;
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: 0.2em;
+    }
   }
 
   .header-nav {

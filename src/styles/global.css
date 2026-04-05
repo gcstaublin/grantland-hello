@@ -189,6 +189,10 @@
 // --------------------------------------------
 */
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 /* Box sizing rules */
 *,
 *::before,

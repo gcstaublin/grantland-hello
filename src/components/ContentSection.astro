@@ -79,14 +79,16 @@ const { section, isDefault = false } = Astro.props;
 
     {
       section.misc && (
-        <div class="misc">
-          <h3 class="misc__title accent--medium">{section.miscTitle}</h3>
+        <details class="misc">
+          <summary class="misc__title accent--medium">
+            {section.miscTitle}
+          </summary>
           <ul class="misc__items">
             {section.misc.map((item: string) => (
               <li class="misc__item body--default">{item}</li>
             ))}
           </ul>
-        </div>
+        </details>
       )
     }
 
@@ -319,22 +321,58 @@ const { section, isDefault = false } = Astro.props;
   .misc {
     background-color: var(--surface);
     padding: 1rem;
-    padding-inline-start: 7%;
-    padding-block-start: 3%;
+    padding-inline-start: 3rem;
+    padding-block-start: 2rem;
     padding-block-end: 2rem;
-    border-radius: 20px;
-    corner-shape: bevel;
+    border-radius: 1.25rem;
+    corner-shape: bevel square;
+    overflow: hidden;
+    outline-style: solid;
+    outline-width: 4px;
+    outline-offset: -8px;
+    outline-color: var(--bg);
 
     & > * + * {
       margin-block-start: 1rem;
     }
+
+    &::details-content {
+      block-size: 0;
+      transition:
+        block-size 0.15s ease-in-out,
+        content-visibility 0.15s ease-out;
+      transition-behavior: allow-discrete;
+    }
+
+    &[open]::details-content {
+      block-size: auto;
+    }
   }
 
   .misc__title {
-    color: var(--text-utility);
+    position: relative;
     margin: 0;
+    cursor: pointer;
+    color: var(--text-utility);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-weight: var(--font-weight-500);
+    letter-spacing: 0.08em;
+    list-style-position: outside;
+    transition: all 0.25s;
+
+    &:hover {
+      color: var(--text-muted);
+    }
+
+    &::marker {
+      content: "⏩︎ ";
+      color: var(--text-warning);
+    }
+  }
+
+  /* Misc is open */
+  .misc[open] summary::marker {
+    content: "⏬︎ ";
   }
 
   .misc__items {

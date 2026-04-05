@@ -322,16 +322,8 @@ const { section, isDefault = false } = Astro.props;
     padding-inline-start: 7%;
     padding-block-start: 3%;
     padding-block-end: 2rem;
-    clip-path: polygon(
-      0 2rem,
-      2rem 2rem,
-      2rem 0,
-      100% 0,
-      100% 90%,
-      95% 90%,
-      95% 100%,
-      0 100%
-    );
+    border-radius: 20px;
+    corner-shape: bevel;
 
     & > * + * {
       margin-block-start: 1rem;

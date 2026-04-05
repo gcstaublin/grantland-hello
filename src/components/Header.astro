@@ -58,17 +58,17 @@ import DividerAccent from "./DividerAccent.astro";
 {/* ================================== */}
 <style>
   .site-header {
-    grid-area: header;
-    /* grid-column: 1 / -1; */
     position: relative;
-    /* grid-row: 1; */
+    z-index: 10;
+    grid-area: header;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 0 24px;
+    /* grid-column: 1 / -1; */
+    /* grid-row: 1; */
     border-bottom: 1px solid var(--border);
     background: var(--bg);
-    z-index: 10;
   }
 
   .header-brand {
@@ -93,13 +93,14 @@ import DividerAccent from "./DividerAccent.astro";
   }
 
   .header-brand .vol {
-    color: var(--text-muted);
     margin-left: 4px;
+    color: var(--text-muted);
   }
 
   .header-section-label {
     display: flex;
     gap: 1rem;
+    min-height: 14px;
     font-family: var(--font-mono);
     font-size: 11px;
     font-weight: 400;
@@ -109,7 +110,6 @@ import DividerAccent from "./DividerAccent.astro";
     text-transform: uppercase;
     text-align: center;
     transition: opacity 0.3s ease;
-    min-height: 14px;
 
     & h3 {
       margin-block-start: 0;
@@ -127,13 +127,13 @@ import DividerAccent from "./DividerAccent.astro";
   }
 
   .header-icon-btn {
+    display: flex;
+    align-items: center;
+    padding: 6px;
     background: transparent;
     border: 1px solid var(--border-light);
     cursor: pointer;
-    padding: 6px;
     color: var(--text-dim);
-    display: flex;
-    align-items: center;
     transition:
       color 0.2s ease,
       border-color 0.2s ease;
@@ -145,8 +145,8 @@ import DividerAccent from "./DividerAccent.astro";
   }
 
   .header-icon-btn svg {
+    display: block;
     width: 17px;
     height: 17px;
-    display: block;
   }
 </style>

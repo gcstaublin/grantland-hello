@@ -50,9 +50,10 @@ const { meta } = Astro.props;
 {/* ================================== */}
 <style>
   .site-header {
-    grid-column: 1 / -1;
+    grid-area: header;
+    /* grid-column: 1 / -1; */
     position: relative;
-    grid-row: 1;
+    /* grid-row: 1; */
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;

@@ -189,7 +189,7 @@ const { section, isDefault = false } = Astro.props;
   /* ─── Section: Hero Image ────────────────────────────────── */
   .section-hero {
     /* padding-block-end: var(--section-body-gap); */
-    padding-block-end: 1rem;
+    /* padding-block-end: 1rem; */
   }
 
   .hero__type-block {
@@ -224,7 +224,8 @@ const { section, isDefault = false } = Astro.props;
 
   .section-title {
     font-family: var(--font-accent);
-    font-size: clamp(60px, 6vw, 96px);
+    /* font-size: clamp(60px, 6vw, 96px); */
+    font-size: clamp(54px, 6vw, 72px);
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.01em;
@@ -272,6 +273,9 @@ const { section, isDefault = false } = Astro.props;
     text-transform: uppercase;
     text-wrap: balance;
     color: var(--text-muted);
+
+    /* border-radius: 20px; */
+    /* corner-shape: bevel square; */
   }
 
   .section-image-block {
@@ -292,19 +296,25 @@ const { section, isDefault = false } = Astro.props;
     position: relative;
     top: -1.75rem;
     left: 4rem;
-    max-width: 30ch;
-    background-color: var(--bg);
+    max-width: 35ch;
     color: var(--text-dim);
     padding-block: 1.5rem;
     padding-block-end: 1.25rem;
     padding-inline: 2rem;
 
+    background-color: var(--bg);
     border-radius: 1.25rem;
     corner-shape: bevel square;
+    /* corner-shape: square bevel; */
     outline-style: solid;
     outline-width: 1px;
     outline-offset: -6px;
     outline-color: var(--border-light);
+  }
+
+  .section-image-caption {
+    font-size: 90%;
+    font-weight: 300;
   }
 
   .hero__image-caption {

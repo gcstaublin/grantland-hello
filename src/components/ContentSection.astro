@@ -200,11 +200,20 @@ const { section, isDefault = false } = Astro.props;
   .section-body {
     max-width: var(--section-ch);
     padding-inline: var(--section-space-inline);
+    border: 1px solid red;
+
+    container-name: section-body;
+    container-type: inline-size;
   }
 
   .section-body-content {
     columns: 2;
     gap: var(--section-body-gap);
+    border: 1px solid blue;
+
+    @container section-body (width < 630px) {
+      columns: 1;
+    }
   }
 
   .section-label {
@@ -251,12 +260,16 @@ const { section, isDefault = false } = Astro.props;
   .section-image-block {
     /* margin: 28px 0; */
     position: relative;
+    align-items: center;
+    border: 1px solid green;
+    max-inline-size: 40ch;
   }
 
   .section-image-block img {
     display: block;
     width: 100%;
     height: auto;
+    /* max-inline-size: 40ch; */
   }
 
   .section-image-caption,

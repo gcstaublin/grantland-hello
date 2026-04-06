@@ -132,7 +132,14 @@ const { section, isDefault = false } = Astro.props;
 {/* ================================== */}
 {/* --> Style                          */}
 {/* ================================== */}
-<style>
+<style is:global>
+  /* Variables
+  // -------------------------------------------- */
+
+  /* :root {
+    --section-body-bp: 630px;
+  } */
+
   /* Overall Space
   // -------------------------------------------- */
   .section-body > * + * {
@@ -142,6 +149,8 @@ const { section, isDefault = false } = Astro.props;
   /* Content Section
   // -------------------------------------------- */
   .content-section {
+    container-name: content-section;
+    container-type: inline-size;
     display: none;
     opacity: 0;
     min-height: calc(100vh - var(--header-h));
@@ -154,7 +163,7 @@ const { section, isDefault = false } = Astro.props;
       display: block;
       opacity: 1;
       transform: translateY(0);
-      margin-bottom: var(--section-space-bottom);
+      /* margin-bottom: var(--section-space-bottom); */
     }
 
     &.is-leaving {
@@ -166,6 +175,10 @@ const { section, isDefault = false } = Astro.props;
         transform 0.25s ease;
       pointer-events: none;
     }
+  }
+
+  .scroll-mode .content-section.is-visible {
+    margin-bottom: var(--section-space-bottom);
   }
 
   /* Scroll mode: all sections visible */
@@ -200,17 +213,22 @@ const { section, isDefault = false } = Astro.props;
   .section-body {
     max-width: var(--section-ch);
     padding-inline: var(--section-space-inline);
-    /* border: 1px solid red; */
-    border-inline: 1px solid var(--border-light);
+    border-inline-end: 0.5px solid var(--border-light);
+    border-block-start: 0.5px solid var(--border-light);
+    border-radius: 20px;
+    corner-shape: square bevel square;
 
     container-name: section-body;
     container-type: inline-size;
+
+    @container content-section (width < 1040px) {
+      border-inline-width: 0;
+    }
   }
 
   .section-body-content {
     columns: 2;
     gap: var(--section-body-gap);
-    /* border: 1px solid blue; */
 
     /* Change number of columns for smaller container size */
     @container section-body (width < 630px) {
@@ -221,7 +239,7 @@ const { section, isDefault = false } = Astro.props;
         --caption-position-left: 0;
         --caption-position-top: -1rem;
       }
-    }
+    } /* end container query */
   }
 
   .section-label {
@@ -231,10 +249,10 @@ const { section, isDefault = false } = Astro.props;
   }
 
   .section-title {
+    margin-block-start: 1em;
+    margin-block-end: -8px;
     padding-inline-start: 3rem;
     text-indent: -3rem;
-    /* border: 1px solid red; */
-    border-bottom: 1px solid var(--border-light);
   }
 
   .section-lead {
@@ -268,11 +286,8 @@ const { section, isDefault = false } = Astro.props;
   }
 
   .section-image-block {
-    /* margin: 28px 0; */
     position: relative;
     margin-inline: 0;
-    /* align-items: center; */
-    /* border: 1px solid green; */
     max-inline-size: 40ch;
   }
 
@@ -280,12 +295,10 @@ const { section, isDefault = false } = Astro.props;
     display: block;
     width: 100%;
     height: auto;
-    /* max-inline-size: 40ch; */
   }
 
   .section-image-caption,
   .hero__image-caption {
-    --p: 0.35rem; /* control the shape (can be percentage) */
     --caption-position-top: -1.75rem;
     --caption-position-left: 4rem;
     --caption-padding-block: 1.25rem;
@@ -327,6 +340,7 @@ const { section, isDefault = false } = Astro.props;
     gap: 12px;
     margin-top: 32px;
     padding-top: 20px;
+    padding-block-end: 1rem;
     /* border-top: 1px solid var(--border); */
   }
 

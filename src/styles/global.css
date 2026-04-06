@@ -831,6 +831,11 @@ text-transform: capitalize;
 }
 
 
+/* Hide offline section when scroll mode is active */
+.scroll-mode .offline-section {
+  display: none !important;
+}
+
 .offline-section.is-visible {
   display: flex;
   opacity: 1;

@@ -38,7 +38,9 @@ const { section, isDefault = false } = Astro.props;
         <h4 class="section-label accent--micro">
           {section.label}
         </h4>
-        <h2 class="section-title section__title">{section.title}</h2>
+        <h2 class="section-title section__title display--large">
+          {section.title}
+        </h2>
       </div>
     </div>
   </div>
@@ -56,7 +58,9 @@ const { section, isDefault = false } = Astro.props;
           {section.body.map((item: BodyItem) => {
             if (item.type === "pullquote") {
               return (
-                <blockquote class="section-pullquote">{item.text}</blockquote>
+                <blockquote class="section-pullquote display--medium">
+                  {item.text}
+                </blockquote>
               );
             } else if (item.type === "image") {
               return (
@@ -129,12 +133,14 @@ const { section, isDefault = false } = Astro.props;
 {/* --> Style                          */}
 {/* ================================== */}
 <style>
-  /* ─── Overall space ───────────────────────────────────── */
+  /* Overall Space
+  // -------------------------------------------- */
   .section-body > * + * {
     margin-top: 2rem;
   }
 
-  /* ─── Content Section ───────────────────────────────────── */
+  /* Content Section
+  // -------------------------------------------- */
   .content-section {
     display: none;
     opacity: 0;
@@ -162,23 +168,6 @@ const { section, isDefault = false } = Astro.props;
     }
   }
 
-  /* .content-section.is-visible {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    margin-bottom: var(--section-space-bottom);
-  } */
-
-  /* .content-section.is-leaving {
-    display: block;
-    opacity: 0;
-    transform: translateY(-8px);
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease;
-    pointer-events: none;
-  } */
-
   /* Scroll mode: all sections visible */
   .main-content.scroll-mode .content-section {
     display: block;
@@ -186,7 +175,8 @@ const { section, isDefault = false } = Astro.props;
     transform: translateY(0);
   }
 
-  /* ─── Section: Hero Image ────────────────────────────────── */
+  /* Section: Hero Image
+  // -------------------------------------------- */
   .section-hero {
     /* padding-block-end: var(--section-body-gap); */
     /* padding-block-end: 1rem; */
@@ -205,7 +195,8 @@ const { section, isDefault = false } = Astro.props;
     margin-block-end: 2rem;
   }
 
-  /* ─── Section: Body ──────────────────────────────────────── */
+  /* Section: Body
+  // -------------------------------------------- */
   .section-body {
     max-width: var(--section-ch);
     padding-inline: var(--section-space-inline);
@@ -223,15 +214,6 @@ const { section, isDefault = false } = Astro.props;
   }
 
   .section-title {
-    font-family: var(--font-accent);
-    /* font-size: clamp(60px, 6vw, 96px); */
-    font-size: clamp(54px, 6vw, 72px);
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    text-wrap: balance;
-    color: var(--text);
     padding-inline-start: 3rem;
     text-indent: -3rem;
   }
@@ -264,18 +246,6 @@ const { section, isDefault = false } = Astro.props;
     margin: 28px 0;
     padding-block-end: 1.5rem;
     border-block-end: 1px solid var(--border-light);
-    font-family: var(--font-accent);
-    /* font-size: clamp(22px, 3vw, 30px); */
-    font-size: clamp(18px, 3vw, 30px);
-    font-weight: 100;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    text-wrap: balance;
-    color: var(--text-muted);
-
-    /* border-radius: 20px; */
-    /* corner-shape: bevel square; */
   }
 
   .section-image-block {
@@ -305,7 +275,6 @@ const { section, isDefault = false } = Astro.props;
     background-color: var(--bg);
     border-radius: 1.25rem;
     corner-shape: bevel square;
-    /* corner-shape: square bevel; */
     outline-style: solid;
     outline-width: 1px;
     outline-offset: -6px;
@@ -321,7 +290,8 @@ const { section, isDefault = false } = Astro.props;
     max-width: 50ch;
   }
 
-  /* ─── Section: Tags ──────────────────────────────────────── */
+  /* Section: Tags
+  // -------------------------------------------- */
   .section__tags {
     display: flex;
     gap: 12px;
@@ -335,7 +305,8 @@ const { section, isDefault = false } = Astro.props;
     text-transform: uppercase;
   }
 
-  /* ─── Section: Misc ──────────────────────────────────────── */
+  /* Section: Misc
+  // -------------------------------------------- */
   .misc {
     overflow: hidden;
     padding: 1rem;
@@ -405,6 +376,4 @@ const { section, isDefault = false } = Astro.props;
   .misc__item {
     color: var(--text-dim);
   }
-
-  /* ─── Section: Hero Image ──────────────────────────────────────── */
 </style>

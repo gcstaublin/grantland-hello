@@ -198,6 +198,30 @@
 }
 
 
+/* Display Classes
+// -------------------------------------------- */
+.display--large {
+  font-family: var(--font-accent);
+  font-size: clamp(54px, 6vw, 72px);
+  font-weight: var(--font-weight-600);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  color: var(--text);
+}
+
+.display--medium {
+  font-family: var(--font-accent);
+  /* font-size: clamp(22px, 3vw, 30px); */
+  font-size: clamp(18px, 3vw, 30px);
+  font-weight: 100;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  color: var(--text-muted);
+}
 
 
 /*
@@ -827,29 +851,11 @@ text-transform: capitalize;
 }
 
 .offline-title {
-  font-family: var(--font-accent);
-  /* font-size: clamp(60px, 6vw, 80px); */
-  font-size: clamp(54px, 6vw, 72px);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  margin-block-start: 2rem;
-  /* margin-bottom: 28px; */
-  white-space: pre-line;
-  color: var(--text);
-  text-wrap: balance;
+  /* white-space: pre-line; */
 }
 
 .offline-message {
-  /* font-family: var(--font-sans); */
-  /* font-size: 13px; */
-  /* font-weight: 300; */
-  /* line-height: 1.8; */
   color: var(--text-dim);
-  /* max-width: 420px; */
-  /* margin-bottom: 40px; */
-  /* font-style: italic; */
 }
 
 .offline-cta {

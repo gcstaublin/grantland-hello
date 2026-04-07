@@ -163,7 +163,6 @@ const { section, isDefault = false } = Astro.props;
       display: block;
       opacity: 1;
       transform: translateY(0);
-      /* margin-bottom: var(--section-space-bottom); */
     }
 
     &.is-leaving {
@@ -177,6 +176,7 @@ const { section, isDefault = false } = Astro.props;
     }
   }
 
+  /* Adds margin to sections when in scroll mode */
   .scroll-mode .content-section.is-visible {
     margin-bottom: var(--section-space-bottom);
   }
@@ -191,8 +191,6 @@ const { section, isDefault = false } = Astro.props;
   /* Section: Hero Image
   // -------------------------------------------- */
   .section-hero {
-    /* padding-block-end: var(--section-body-gap); */
-    /* padding-block-end: 1rem; */
   }
 
   .hero__type-block {
@@ -239,7 +237,7 @@ const { section, isDefault = false } = Astro.props;
         --caption-position-left: 0;
         --caption-position-top: -1rem;
       }
-    } /* end container query */
+    }
   }
 
   .section-label {
@@ -341,7 +339,6 @@ const { section, isDefault = false } = Astro.props;
     margin-top: 32px;
     padding-top: 20px;
     padding-block-end: 1rem;
-    /* border-top: 1px solid var(--border); */
   }
 
   .section__tag {

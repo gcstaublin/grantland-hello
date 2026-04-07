@@ -62,7 +62,7 @@
 :root {
   --body-size-100: 0.625rem;
   --body-size-200: 0.75rem;
-  --body-size-200: 0.875rem;
+  --body-size-300: 0.875rem;
   --body-size-400: 1rem;
   --body-size-500: 1.125rem;
   --body-size-600: 1.375rem;
@@ -170,6 +170,9 @@
 
 /* Accent Classes
 // -------------------------------------------- */
+
+/* Space Grotesk supports 300 - 700 */
+
 .accent--micro {
   font-family: var(--font-accent);
   font-size: var(--body-size-100);
@@ -192,7 +195,7 @@
   font-family: var(--font-accent);
   font-size: var(--body-size-500);
   line-height: var(--line-height-caption);
-  font-weight: var(--font-weight-800);
+  font-weight: var(--font-weight-700);
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -204,7 +207,7 @@
   font-family: var(--font-accent);
   font-size: clamp(54px, 6vw, 72px);
   font-weight: var(--font-weight-600);
-  line-height: 1;
+  line-height: var(--line-height-set-solid);
   letter-spacing: -0.01em;
   text-transform: uppercase;
   text-wrap: balance;
@@ -215,12 +218,43 @@
   font-family: var(--font-accent);
   /* font-size: clamp(22px, 3vw, 30px); */
   font-size: clamp(18px, 3vw, 30px);
-  font-weight: 100;
-  line-height: 1.15;
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-height-tight);
   letter-spacing: -0.01em;
   text-transform: uppercase;
   text-wrap: balance;
   color: var(--text-muted);
+}
+
+/* Accent Classes
+// -------------------------------------------- */
+.mono--extra-small {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: var(--font-weight-400);
+  letter-spacing: 0.08em;
+}
+
+.mono--small {
+  font-family: var(--font-mono);
+  font-size: var(--body-size-100);
+  font-weight: var(--font-weight-500);
+  letter-spacing: 0.18em;
+}
+
+.mono--medium {
+  font-family: var(--font-mono);
+  /* font-size: 10.5px; */
+  /* font-size: var(--body-size-200); */
+  font-size: 11px;
+  font-weight: var(--font-weight-400);
+  line-height: 1.75;
+}
+
+.mono--large {
+  font-family: var(--font-mono);
+  font-size: var(--body-size-300);
+  font-weight: var(--font-weight-300);
 }
 
 
@@ -474,20 +508,20 @@ grid-area: aside;
 }
 
 .chat-title {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  /* font-family: var(--font-mono); */
+  /* font-size: 10px; */
+  /* font-weight: 500; */
+  /* letter-spacing: 0.18em; */
   color: var(--text);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 
 .chat-status {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  font-weight: 400;
-  letter-spacing: 0.12em;
+  /* font-family: var(--font-mono); */
+  /* font-size: 9px; */
+  /* font-weight: 400; */
+  /* letter-spacing: 0.12em; */
   color: var(--text-muted);
   text-transform: uppercase;
   display: flex;
@@ -515,15 +549,10 @@ grid-area: aside;
 }
 
 @keyframes pulse {
-
   0%,
-  100% {
-    opacity: 1;
-  }
+  100% { opacity: 1; }
 
-  50% {
-    opacity: 0.5;
-  }
+  50% { opacity: 0.5; }
 }
 
 .chat-messages {
@@ -572,13 +601,14 @@ grid-area: aside;
   background-color: var(--chat-surface);
   border: 1px solid var(--chat-border);
   padding: 10px 12px;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 400;
-  line-height: 1.75;
+  /* font-family: var(--font-mono); */
+  /* font-size: 10.5px; */
+  /* font-weight: 400; */
+  /* line-height: 1.75; */
   color: var(--chat-foreground);
   white-space: pre-wrap;
   word-break: break-word;
+  /* background-color: red; */
 }
 
 .chat-msg-user {
@@ -629,13 +659,14 @@ text-transform: capitalize;
 }
 
 .chat-msg-timestamp {
-  font-family: var(--font-mono);
-  font-size: 8.5px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
+  /* font-family: var(--font-mono); */
+  /* font-size: 8.5px; */
+  /* font-weight: 400; */
+  /* letter-spacing: 0.08em; */
   color: var(--text-muted);
-  margin-top: 4px;
+  margin-top: 6px;
   padding: 0 2px;
+  /* color: red; */
 }
 
 .chat-msg-user .chat-msg-timestamp {
@@ -661,13 +692,15 @@ text-transform: capitalize;
   background: var(--chat-surface);
   border: 1px solid var(--chat-border);
   color: var(--text);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 400;
+  /* font-family: var(--font-mono); */
+  /* font-size: 11px; */
+  /* font-weight: 400; */
   padding: 9px 12px;
   outline: none;
   transition: border-color 0.2s ease;
   caret-color: var(--text);
+
+  /* color: red; */
 }
 
 .chat-input:focus {
@@ -688,9 +721,13 @@ text-transform: capitalize;
   background: transparent;
   border: 1px solid var(--chat-border);
   color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: 14px;
-  padding: 8px 10px;
+  /* font-family: var(--font-mono); */
+  /* font-size: 14px; */
+  /* padding: 8px 10px; */
+  width: 40px;
+  height: 40px;
+  font-size: var(--body-size-500);
+  /* padding: 0.85em 1.15em; */
   cursor: pointer;
   transition:
     color 0.2s ease,
@@ -722,10 +759,10 @@ text-transform: capitalize;
 }
 
 .chat-clear-btn {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  /* font-family: var(--font-mono); */
+  /* font-size: 9px; */
+  /* font-weight: 400; */
+  /* letter-spacing: 0.1em; */
   text-transform: uppercase;
   color: var(--text-muted);
   background: transparent;
@@ -790,11 +827,12 @@ text-transform: capitalize;
 // -------------------------------------------- */
 .mode-badge {
   font-family: var(--font-mono);
-  font-size: 8.5px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  /* font-size: 8.5px; */
+  /* font-weight: 500; */
+  /* letter-spacing: 0.12em; */
   text-transform: uppercase;
-  color: var(--text-muted);
+  /* color: var(--text-muted); */
+  color: var(--text-utility);
   border: 1px solid var(--chat-border);
   padding: 2px 6px;
   margin-left: auto;
@@ -864,16 +902,16 @@ text-transform: capitalize;
 }
 
 .offline-cta {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
+  /* font-family: var(--font-mono); */
+  /* font-size: 10px; */
+  /* font-weight: 300; */
+  /* letter-spacing: 0.16em; */
+  /* text-transform: uppercase; */
+  /* letter-spacing: 0.25em; */
   /* color: var(--bg); */
   /* background: var(--text); */
   background: var(--bg);
-  color: var(--text);
+  color: var(--text-muted);
   border: none;
   padding: 12px 24px;
   cursor: pointer;

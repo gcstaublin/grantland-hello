@@ -9,8 +9,8 @@ import "../styles/global.css";
   aria-label="The Interrogation chat interface"
 >
   <div class="chat-header">
-    <div class="chat-title">{chat.panelTitle}</div>
-    <div class="chat-status">
+    <div class="chat-title mono--small">{chat.panelTitle}</div>
+    <div class="chat-status mono--small">
       <span class="chat-status-dot active" id="chat-status-dot"></span>
       <span id="chat-status-text">{chat.statusLabel}</span>
     </div>
@@ -24,7 +24,7 @@ import "../styles/global.css";
     <form class="chat-input-form" id="chat-form" autocomplete="off">
       <input
         type="text"
-        class="chat-input"
+        class="chat-input mono--medium"
         id="chat-input"
         placeholder="enter directive..."
         aria-label="Chat input"
@@ -34,7 +34,7 @@ import "../styles/global.css";
       />
       <button
         type="submit"
-        class="chat-submit"
+        class="chat-submit mono--large"
         id="chat-submit"
         aria-label="Send">↵</button
       >
@@ -42,9 +42,18 @@ import "../styles/global.css";
   </div>
 
   <div class="chat-footer">
-    <span class="mode-badge" id="mode-badge">CHAT MODE</span>
-    <button class="chat-clear-btn" id="chat-clear-btn" type="button">
+    <span class="mode-badge mono--extra-small" id="mode-badge">CHAT MODE</span>
+    <button
+      class="chat-clear-btn mono--extra-small"
+      id="chat-clear-btn"
+      type="button"
+    >
       // clear history
     </button>
   </div>
 </aside>
+
+{/* ================================== */}
+{/* --> Style                          */}
+{/* ================================== */}
+<style is:global></style>

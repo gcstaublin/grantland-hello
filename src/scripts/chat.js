@@ -354,11 +354,11 @@ function renderMessage({ type, text, ts }) {
   msg.className = `chat-msg chat-msg-${type}`;
 
   const bubble = document.createElement("div");
-  bubble.className = "chat-msg-bubble";
+  bubble.className = "chat-msg-bubble mono--medium";
   bubble.textContent = text;
 
   const timestamp = document.createElement("div");
-  timestamp.className = "chat-msg-timestamp";
+  timestamp.className = "chat-msg-timestamp mono--extra-small";
   timestamp.textContent = formatTime(ts);
 
   msg.appendChild(bubble);

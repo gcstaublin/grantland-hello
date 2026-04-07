@@ -411,11 +411,15 @@ const { section, isDefault = false } = Astro.props;
       color: var(--text-warning);
     }
     margin: 0;
+    margin-block-start: 1rem;
     padding: 0;
     list-style-position: outside;
   }
 
   .misc__item {
     color: var(--text-dim);
+    & + & {
+      margin-block-start: 0.15rem;
+    }
   }
 </style>

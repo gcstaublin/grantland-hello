@@ -40,20 +40,23 @@
 // -------------------------------------------- */
 [data-theme="light"] {
 
-  --bg: rgba(249, 250, 251, 1);
-  --surface: rgba(242, 245, 247, 1);
+  /* --bg: rgba(249, 250, 251, 1); */
+  --bg: rgb(252, 251, 251);
+  /* --surface: rgba(242, 245, 247, 1); */
+  --surface: rgb(235, 238, 240);
   --surface-alt: rgba(220, 225, 230, 1);
   --border: rgba(211, 216, 222, 0.6);
   --border-light: rgba(211, 216, 222, 0.8);
 
   --text: rgba(19, 41, 63, 1);
   --text-dim: rgba(80, 98, 119, 1);
-  --text-muted: rgba(19, 41, 63, 0.4);
+  --text-muted: rgba(19, 41, 63, 0.6);
 
-  --chat-bg: #ede9e3;
-  --chat-surface: #e6e2dc;
-  --chat-border: #cbc7c0;
-  --chat-surface-user: rgba(21, 172, 243, 0.8);
+  --chat-bg: var(--bg);
+  --chat-surface: rgba(237, 235, 233, 0.6);
+  --chat-border:rgba(224, 221, 221, 0.5);
+  --chat-foreground-user: var(--bg);
+  --chat-surface-user: rgba(18, 81, 176, 0.8);
 }
 
 

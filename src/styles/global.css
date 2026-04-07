@@ -101,10 +101,6 @@
 }
 
 
-/* xxxx
-// -------------------------------------------- */
-
-
 
 
 /*
@@ -258,6 +254,8 @@
 }
 
 
+
+
 /*
 // --------------------------------------------
 // --------------------------------------------
@@ -389,7 +387,6 @@ body {
 
 
 
-
 /*
 // --------------------------------------------
 // --------------------------------------------
@@ -409,6 +406,8 @@ body {
 }
 
 
+
+
 /*
 // --------------------------------------------
 // --------------------------------------------
@@ -418,7 +417,6 @@ body {
 // --------------------------------------------
 // --------------------------------------------
 */
-
 
 /* Scroll Mode Banner
 // -------------------------------------------- */
@@ -472,10 +470,6 @@ body {
   background: var(--border-light);
   border-radius: 2px;
 }
-
-
-
-
 
 
 
@@ -534,6 +528,7 @@ body {
 
 .offline-title {
   /* white-space: pre-line; */
+  margin-block-start: 0;
 }
 
 .offline-message {
@@ -541,21 +536,13 @@ body {
 }
 
 .offline-cta {
-  /* font-family: var(--font-mono); */
-  /* font-size: 10px; */
-  /* font-weight: 300; */
-  /* letter-spacing: 0.16em; */
-  /* text-transform: uppercase; */
-  /* letter-spacing: 0.25em; */
-  /* color: var(--bg); */
-  /* background: var(--text); */
+  padding: 12px 24px;
+  width: 40ch;
   background: var(--bg);
   color: var(--text-muted);
   border: none;
-  padding: 12px 24px;
   cursor: pointer;
   transition: opacity 0.2s ease;
-  width: 40ch;
 
   border-radius: 5px;
   corner-shape: bevel square;

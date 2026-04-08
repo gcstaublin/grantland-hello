@@ -87,7 +87,7 @@ function handleInput(chatData) {
   addUserMessage(raw);
 
   if (state.isOffline) {
-    if (input === "restart") {
+    if (input === "restart" || "kick it") {
       triggerRestart(chatData);
     } else {
       setTimeout(() => {
@@ -101,7 +101,7 @@ function handleInput(chatData) {
   }
 
   // Commands
-  if (input === "exit") {
+  if (input === "exit" || "offline" || "easter egg") {
     triggerExit(chatData);
     return;
   }

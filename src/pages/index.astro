@@ -54,27 +54,20 @@ import ChatPanel from "../components/ChatPanel.astro";
 
         <!-- Offline Section -->
         <!---------------------------------- -->
-        <!-- <div
-          id="offline-section"
-          class="offline-section"
-          data-section-id="offline"
-          style="display: none;"
-        >
-          <p class="offline-label">{content.offline.label}xx</p>
-          <h2 class="offline-title">{content.offline.title}</h2>
-          <p class="offline-message">{content.offline.message}</p>
-          <button class="offline-cta">{content.offline.cta}</button>
-        </div> -->
 
-        <div
+        <section
           id="offline-section"
           class="offline-section"
           data-section-id="offline"
           style="display: none;"
+          data-section-id={content.offline.id}
         >
-          <p class="offline-label">{content.offline.label}</p>
-          <h2 class="offline-title">{content.offline.title}</h2>
-          <p class="offline-message body--extra-large">
+          <h4 class="section-label accent--micro offline-label">
+            {content.offline.label}
+          </h4>
+          <!-- <p class="offline-label">{content.offline.label}</p> -->
+          <h2 class="offline-title display--large">{content.offline.title}</h2>
+          <p class="offline-message body--large">
             {content.offline.message}
           </p>
           <div class="offline-video">
@@ -86,8 +79,8 @@ import ChatPanel from "../components/ChatPanel.astro";
               allowfullscreen
               loading="lazy"></iframe>
           </div>
-          <button class="offline-cta">{content.offline.cta}</button>
-        </div>
+          <button class="offline-cta mono--small">{content.offline.cta}</button>
+        </section>
       </main>
       <!-- Chat panel -->
       <!---------------------------------- -->

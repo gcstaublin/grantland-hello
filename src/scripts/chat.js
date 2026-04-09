@@ -87,7 +87,7 @@ function handleInput(chatData) {
   addUserMessage(raw);
 
   if (state.isOffline) {
-    if (input === "restart" || "kick it") {
+    if (input === "restart") {
       triggerRestart(chatData);
     } else {
       setTimeout(() => {
@@ -101,10 +101,10 @@ function handleInput(chatData) {
   }
 
   // Commands
-  if (input === "exit" || "offline" || "easter egg") {
-    triggerExit(chatData);
-    return;
-  }
+    if (input === "exit") {
+      triggerExit(chatData);
+      return;
+    }
 
   if (input === "scroll") {
     triggerScrollMode(chatData);

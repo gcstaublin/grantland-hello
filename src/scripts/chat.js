@@ -101,10 +101,10 @@ function handleInput(chatData) {
   }
 
   // Commands
-  if (input === "exit") {
-    triggerExit(chatData);
-    return;
-  }
+    if (input === "exit") {
+      triggerExit(chatData);
+      return;
+    }
 
   if (input === "scroll") {
     triggerScrollMode(chatData);

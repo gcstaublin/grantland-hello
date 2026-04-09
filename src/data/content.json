@@ -273,7 +273,14 @@
     },
     {
       "id": "remote-work",
-      "keywords": ["remote work", "flexibility", "focus", "determination", "4"],
+      "keywords": [
+        "remote work",
+        "flexibility",
+        "focus",
+        "hermit",
+        "commute",
+        "4"
+      ],
       "label": "// THE SHORT COMMUTE //",
       "title": "The commute is optional but the focus isn't",
       "lead": "I love the flexibility of remote work, but value the opportunity for in-person collaboration",
